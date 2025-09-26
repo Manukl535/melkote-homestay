@@ -14,6 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Debug secrets
+        run: |
+          echo "FTP_USERNAME is: ${{ secrets.FTP_USERNAME }}"
+          echo "FTP_PASSWORD is: ${{ secrets.FTP_PASSWORD }}"
+
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
