@@ -172,6 +172,3 @@
   <!-- JavaScript End -->
 </body>
 </html>
-
-< ! - -   T r i g g e r   d e p l o y m e n t   - - >  
- 

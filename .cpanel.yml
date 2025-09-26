@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/melukote/public_html/
+    - /bin/echo "Deploying index.php"
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/echo "Deploying CSS and JS"
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/echo "✅ Deployment complete"
