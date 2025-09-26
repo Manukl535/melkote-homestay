@@ -1,0 +1,9 @@
+# Ignore database connection file
+connection.php
+
+# Ignore hidden OS files
+.DS_Store
+Thumbs.db
+
+# Ignore environment config (if you use one)
+.env
