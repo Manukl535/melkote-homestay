@@ -1,4 +1,4 @@
-name: FTP Deploy to cPanel
+name: Secret Test
 
 on:
   push:
@@ -6,24 +6,10 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
-    name: FTP Deploy
+  check-secrets:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Debug secrets
+      - name: Show secrets
         run: |
-          echo "FTP_USERNAME is: ${{ secrets.FTP_USERNAME }}"
-          echo "FTP_PASSWORD is: ${{ secrets.FTP_PASSWORD }}"
-
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ftp.melukote.com
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/
-          protocol: ftp
+          echo "Username: ${{ secrets.FTP_USERNAME }}"
+          echo "Password: ${{ secrets.FTP_PASSWORD }}"
