@@ -1,0 +1,303 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar button {
+  padding: 8px 12px;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  background: url('images/temple.png') center/cover no-repeat;
+  padding: 100px 20px;
+  color: #fff;
+  background-color: #333; /* fallback if image not loaded */
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 60px 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.address {
+  margin-top: 10px;
+  font-weight: bold;
+   margin-top: 10px; 
+   text-decoration: none;
+}
+
+.address a {
+  color: #3360f3;
+  text-decoration: none;
+}
+
+.quick-facts ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.about-quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+  .about-quick-facts > * {
+    flex: 1 1 50%;
+  }
+}
+
+#amenities h2 {
+  text-align: center;
+}
+
+#amenities ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#amenities li {
+  margin: 20px;
+  flex: 1 1 calc(33.33% - 40px);
+
+}
+
+#amenities img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.contact-feedback-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Each section takes up to 48% of the width */
+.contact-feedback-container .section {
+  flex: 1 1 48%;
+  box-sizing: border-box;
+}
+
+/* Responsive: Stack vertically on small screens */
+@media (max-width: 768px) {
+  .contact-feedback-container {
+    flex-direction: column;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#feedback{
+  margin-top: 40px;
+}
+
+#feedback h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#feedback .feedback-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+#feedback .card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+#feedback .card .stars {
+  color: yellow;
+}
+
+#feedback .card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+#feedback .card .card-body {
+  padding: 10px;
+}
+
+#feedback .card .card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: yellow;
+}
+
+  .local-services {
+    background-color: #f9f9f9;
+  }
+  .local-services h2 {
+    text-align: center;
+  }
+
+  .local-services ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .local-services li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .local-services img.service-image {
+    width: 50%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .hotel-name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .description {
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+  }
+
+
+  @media (max-width: 768px) {
+  .about-quick-facts > * {
+    flex: 1 1 100%;
+  }
+
+  .contact-feedback-container .section {
+    flex: 1 1 100%;
+  }
+
+  .local-services li {
+    flex: 1 1 100%;
+  }
+}
+
