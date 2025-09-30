@@ -1,9 +1,21 @@
-# Ignore database connection file
-connection.php
-
-# Ignore hidden OS files
-.DS_Store
-Thumbs.db
-
-# Ignore environment config (if you use one)
-.env
+# Ignore all possible scripts
+*.cmd
+*.exe
+*.sh
+*.bat
+*.ps1
+*.pyc
+*.pyo
+*.dll
+*.so
+*.jar
+*.class
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.sql
+*.log
+*.json
