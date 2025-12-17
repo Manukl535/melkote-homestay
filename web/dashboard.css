@@ -1,0 +1,126 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Error Message Styling */
+.msg {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.msg-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Bookings Container */
+.bookings-container {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table Styling */
+.booking-table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-table thead {
+    background-color: #3498db;
+    color: white;
+}
+
+.booking-table th, .booking-table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.booking-table th {
+    font-weight: bold;
+}
+
+.booking-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.booking-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* If there are no bookings */
+.no-bookings {
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .booking-table {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .booking-table th, .booking-table td {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .msg {
+        width: 90%;
+    }
+}

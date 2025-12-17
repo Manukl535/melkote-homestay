@@ -19,3 +19,9 @@
 *.sql
 *.log
 *.json
+*.sql
+
+# Ignore specific directories
+inc/
+
+
