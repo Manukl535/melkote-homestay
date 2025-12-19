@@ -1,43 +1,68 @@
 <?php
-// Start the session at the very beginning of the file
+// Start session
 session_start();
-
-// Include the database connection
 include 'inc/connection.php';
 
-// Handle the form submission
+// 1. FETCH BOOKED DATES
+$booked_dates = [];
+$sql_dates = "SELECT check_in, check_out FROM bookings";
+$result_dates = $conn->query($sql_dates);
+
+if ($result_dates && $result_dates->num_rows > 0) {
+    while($row = $result_dates->fetch_assoc()) {
+        $booked_dates[] = [
+            'from' => $row['check_in'],
+            'to' => $row['check_out']
+        ];
+    }
+}
+$booked_dates_json = json_encode($booked_dates);
+
+
+// 2. HANDLE FORM SUBMISSION
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    // Collect form data and sanitize it
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $aadhar_num = mysqli_real_escape_string($conn, $_POST['aadhar_num']);
     $adults = intval($_POST['adults']);
     $children = intval($_POST['children']);
+    $check_in = mysqli_real_escape_string($conn, $_POST['check_in']);
+    $check_out = mysqli_real_escape_string($conn, $_POST['check_out']);
 
-    // Check if terms are agreed to (Server-side validation)
-    if (!isset($_POST['terms'])) {
-        $error_message = "You must agree to the Terms and Policies.";
+    if (empty($check_in) || empty($check_out)) {
+        $error_message = "Please select valid Check-in and Check-out dates.";
     } else {
-        // Prepare and bind statement for inserting data into database
-        $stmt = $conn->prepare("INSERT INTO bookings (name, address, phone, adults, children, aadhar_num) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssiis", $name, $address, $phone, $adults, $children, $aadhar_num);
+        // Double Booking Check
+        $check_sql = "SELECT id FROM bookings WHERE (check_in <= '$check_out' AND check_out >= '$check_in')";
+        $check_result = $conn->query($check_sql);
 
-        // Execute the prepared statement
-        if ($stmt->execute()) {
-            // Set success message and payment QR code
-            $success_message = "Booking successful! Scan the QR code for payment.";
-            $payment_qr_code = "https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/php/qrcodes/payment.png"; // Replace with your QR code URL
+        if ($check_result && $check_result->num_rows > 0) {
+            $error_message = "Sorry! These dates were just booked by someone else. Please try different dates.";
         } else {
-            $error_message = "Error: " . $stmt->error;
+            // Insert Booking
+            $stmt = $conn->prepare("INSERT INTO bookings (name, address, phone, adults, children, aadhar_num, check_in, check_out) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssiisss", $name, $address, $phone, $adults, $children, $aadhar_num, $check_in, $check_out);
+
+            if ($stmt->execute()) {
+                $success_message = "Booking successful!";
+                
+                // --- NEW: Calculate Amount for Modal ---
+                $date1 = new DateTime($check_in);
+                $date2 = new DateTime($check_out);
+                $interval = $date1->diff($date2);
+                $days = $interval->days;
+                if ($days == 0) $days = 1; // Minimum 1 day safety
+                $total_cost = $days * 999;
+                
+                $show_payment_modal = true; 
+            } else {
+                $error_message = "Error: " . $stmt->error;
+            }
+            $stmt->close();
         }
-
-        // Close the prepared statement
-        $stmt->close();
     }
-
-    // Close the database connection
     $conn->close();
 }
 ?>
@@ -46,331 +71,280 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest Booking Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/preview.png" type="image/png" />
+  <title>Book Your Stay | Shree Niwasa</title>
 
-    <style>
-        /* General Page Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        /* Container Card */
-        .booking-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            width: 100%;
-        }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
-        /* Header Styling */
-        h2 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+  <style>
+      /* --- Force Icon & Input to be inline --- */
+      .input-group {
+          display: flex !important;
+          flex-wrap: nowrap !important;
+          align-items: stretch;
+          width: 100%;
+          border: 1px solid #ced4da;
+          border-radius: 8px;
+          overflow: hidden;
+      }
+      
+      .input-group-text {
+          background-color: #e9ecef;
+          border: none !important;
+          border-radius: 0 !important;
+          color: #555;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+      }
 
-        .info-text {
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
+      #dateRange {
+          border: none !important;
+          box-shadow: none !important;
+          flex-grow: 1;
+          width: auto !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+      }
 
-        .highlight {
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        /* Form Grid System (2 Columns) */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* 2 equal columns */
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        /* Input Groups */
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #444;
-            font-size: 0.95em;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            border-color: #3498db;
-            outline: none;
-        }
-
-        /* Terms and Conditions Section */
-        .terms-container {
-            grid-column: 1 / -1;
-            /* Spans full width */
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 0.9em;
-        }
-
-        .terms-container input {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
-        .terms-container a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        /* Submit Button */
-        .submit-btn {
-            grid-column: 1 / -1;
-            /* Spans full width */
-            background-color: #27ae60;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
-
-        .submit-btn:hover {
-            background-color: #219150;
-        }
-
-        /* Messages */
-        .msg {
-            text-align: center;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .msg-success {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .msg-error {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 600px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-                /* Stack to 1 column */
-            }
-        }
-
-        /* Modal Styling */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Semi-transparent background */
-            padding-top: 60px;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        /* Modal Content Styling */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 30px;
-            border: 1px solid #888;
-            width: 90%;
-            /* Full width, but with a max-width for large screens */
-            max-width: 600px;
-            /* Limiting max-width to avoid stretching on large screens */
-            text-align: center;
-            border-radius: 8px;
-            /* Rounded corners for the modal */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Modal Image Styling */
-        .modal img {
-            width: 80%;
-            /* Adjusting width to fit smaller screens */
-            height: auto;
-            max-width: 100%;
-            /* Ensures the image doesn't overflow */
-            margin-top: 20px;
-        }
-
-        /* Close Button Styling */
-        .modal .close {
-            color: #aaa;
-            font-size: 32px;
-            font-weight: bold;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-        /* Close Button Hover Effect */
-        .modal .close:hover,
-        .modal .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Media Query for Responsiveness */
-        @media (max-width: 768px) {
-            .modal-content {
-                width: 95%;
-                /* Ensure modal takes up more space on small screens */
-                padding: 20px;
-            }
-
-            .modal img {
-                width: 100%;
-                /* Make the image take up the full width on smaller screens */
-            }
-        }
-    </style>
-
-    <script type="text/javascript">
-        // Function to display modal after booking is successful
-        function showModal() {
-            var modal = document.getElementById("bookingModal");
-            modal.style.display = "block";
-        }
-
-        // Function to close modal
-        function closeModal() {
-            var modal = document.getElementById("bookingModal");
-            modal.style.display = "none";
-            window.location.href = "index.php"; // Redirect to homepage
-        }
-
-        window.onload = function () {
-            // Show modal after successful booking
-            <?php if (isset($success_message)) {
-                echo "showModal();";
-            } ?>
-        };
-    </script>
+      /* Calendar Colors */
+      .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange {
+          background: #3360f3 !important;
+          border-color: #3360f3 !important;
+      }
+      .flatpickr-day.flatpickr-disabled {
+          background-color: #ffebee !important;
+          color: #d32f2f !important;
+          text-decoration: line-through;
+      }
+  </style>
 </head>
 
-<body>
+<body style="background-color: #f8f9fa;">
 
-    <div class="booking-container">
-        <h2>Reservation</h2>
-        <div class="info-text">Check-in: 12:00 PM • Check-out: 10:00 AM</div>
-        <div class="info-text">Max 6 Guests • <span class="highlight">₹999/day</span> Contribution</div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm d-none d-lg-block">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <?php
-        if (isset($success_message)) {
-            echo "<div class='msg msg-success'>$success_message</div>";
-        } elseif (isset($error_message)) {
-            echo "<div class='msg msg-error'>$error_message</div>";
-        }
-        ?>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#amenities">Facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#local-services">Food & Travel</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#feedback">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+        </ul>
 
-        <form name="bookingForm" action="" method="post" onsubmit="return validateForm()">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone" placeholder="9876543210" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Address (As in Aadhar)</label>
-                    <input type="text" id="address" name="address" placeholder="Street, City, Pincode" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="aadhar_num">Aadhar (Last 4 Digits)</label>
-                    <input type="text" id="aadhar_num" name="aadhar_num" maxlength="4" placeholder="XXXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="adults">Adults (Max 4)</label>
-                    <input type="number" id="adults" name="adults" min="1" max="4" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="children">Children (Max 2)</label>
-                    <input type="number" id="children" name="children" min="0" max="2" value="0" required>
-                </div>
-
-                <div class="terms-container">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms" style="margin:0; font-weight: 400;">
-                        I agree to the <a href="terms.html">Terms and Policies</a> regarding house rules and
-                        cancellations.
-                    </label>
-                </div>
-
-                <input type="submit" value="Confirm Booking" class="submit-btn">
-            </div>
-        </form>
-    </div>
-
-    <!-- Modal for success message -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Booking Successful!</h2>
-            <p>Scan the QR code below for payment of ₹999/day.</p>
-            <img src="img/payment-qr.png" alt="QR Code for Payment"
-                style="width: 200px; height: auto; max-width: 100%; margin-top: 20px;">
-            <p style="margin-top: 20px;">Thank you for choosing Shree Niwasa. We look forward to hosting you!</p>
+        <div class="d-flex align-items-center">
+          <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
+          <a href="bookings.php" class="btn btn-primary me-2">Book Now</a>
+          <a href="https://wa.me/+919008288474" class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i> WhatsApp</a>
         </div>
+      </div>
     </div>
+  </nav>
+
+  <nav class="navbar navbar-light bg-light sticky-top shadow-sm d-lg-none">
+      <div class="container-fluid justify-content-center">
+          <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa</a>
+      </div>
+  </nav>
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4 p-md-5">
+            
+            <h2 class="text-center mb-2" style="font-family: 'Playfair Display', serif;">Reserve Your Stay</h2>
+            <p class="text-center text-muted mb-4">
+              <span class="badge bg-primary fs-6">Contribution: ₹999/day</span>
+            </p>
+
+            <?php if (isset($success_message)): ?>
+                <div class="alert alert-success text-center"><?php echo $success_message; ?></div>
+            <?php elseif (isset($error_message)): ?>
+                <div class="alert alert-danger text-center"><?php echo $error_message; ?></div>
+            <?php endif; ?>
+
+            <form action="" method="post" id="bookingForm">
+              <div class="row g-3">
+
+                <div class="col-12">
+                    <label class="form-label fw-bold text-dark">Select Dates (From - To)</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                        <input type="text" id="dateRange" class="form-control bg-white" placeholder="Select Check-in and Check-out dates" readonly required>
+                    </div>
+                    <input type="hidden" name="check_in" id="check_in">
+                    <input type="hidden" name="check_out" id="check_out">
+                    <div class="form-text text-success fw-bold mt-2" id="nightsCalc"></div>
+                </div>
+                
+                <hr class="my-4 text-muted">
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                    <label for="name">Full Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
+                    <label for="phone">Phone Number</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+                    <label for="address">Address (As per Aadhar)</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="aadhar_num" name="aadhar_num" maxlength="4" placeholder="XXXX" required>
+                    <label for="aadhar_num">Aadhar (Last 4 Digits)</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="adults" name="adults" min="1" max="6" value="1" required>
+                    <label for="adults">Adults (Max 6)</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="children" name="children" min="0" max="4" value="0" required>
+                    <label for="children">Children</label>
+                  </div>
+                </div>
+
+                <div class="col-12 text-center mt-3">
+                  <p class="small text-muted mb-0">
+                    By clicking "Confirm Booking", you agree to our 
+                    <a href="terms.html" target="_blank" class="text-decoration-underline">Terms & House Rules</a>.
+                  </p>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn btn-primary w-100 py-3 fw-bold btn-pulse">
+                    Confirm Booking
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="paymentModal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4 rounded-4 border-0">
+        <div class="modal-header border-0 justify-content-center pb-0">
+           <i class="fa fa-check-circle text-success fa-4x mb-2"></i>
+        </div>
+        <div class="modal-body">
+          <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">Booking Confirmed!</h3>
+          
+          <p class="text-muted fs-5">
+             Scan & Pay 
+             <strong class="text-dark">
+                ₹<?php echo isset($total_cost) ? $total_cost : '0'; ?>
+             </strong>
+          </p>
+          
+          <div class="p-3 bg-light rounded d-inline-block mb-3 border">
+             <img src="img/payment-qr.png" alt="Payment QR Code" class="img-fluid" style="max-width: 200px;">
+          </div>
+          
+          <p class="small text-muted mb-0">Once paid, share screenshot on WhatsApp.</p>
+        </div>
+        <div class="modal-footer border-0 justify-content-center">
+          
+          <a href="index.php" class="btn btn-outline-secondary px-4">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mobile-bottom-nav d-lg-none">
+    <a href="index.php" class="nav-item">
+      <i class="fa fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="index.php#amenities" class="nav-item">
+      <i class="fa fa-bed"></i>
+      <span>Facilities</span>
+    </a>
+    <a href="bookings.php" class="nav-item active-nav">
+      <i class="fa fa-calendar-check-o"></i>
+      <span>Book</span>
+    </a>
+    <a href="gallery.php" class="nav-item">
+      <i class="fa fa-image"></i>
+      <span>Gallery</span>
+    </a>
+    <a href="tel:+919008288474" class="nav-item">
+      <i class="fa fa-phone"></i>
+      <span>Call</span>
+    </a>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    const bookedDates = <?php echo $booked_dates_json; ?>;
+
+    flatpickr("#dateRange", {
+        mode: "range",
+        minDate: "today",
+        dateFormat: "Y-m-d",
+        disable: bookedDates, 
+        onChange: function(selectedDates, dateStr, instance) {
+            if (selectedDates.length === 2) {
+                document.getElementById('check_in').value = instance.formatDate(selectedDates[0], "Y-m-d");
+                document.getElementById('check_out').value = instance.formatDate(selectedDates[1], "Y-m-d");
+                
+                const diffTime = Math.abs(selectedDates[1] - selectedDates[0]);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+                const cost = diffDays * 999;
+                
+                document.getElementById('nightsCalc').innerHTML = 
+                    `<i class="fa fa-check"></i> ${diffDays} Days selected. Total Contribution: <strong>₹${cost}</strong>`;
+            }
+        }
+    });
+
+    <?php if (isset($show_payment_modal) && $show_payment_modal): ?>
+      const myModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+      myModal.show();
+    <?php endif; ?>
+  </script>
 
 </body>
-
 </html>

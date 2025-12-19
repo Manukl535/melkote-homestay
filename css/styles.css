@@ -1,307 +1,333 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Header / Navbar overrides (Bootstrap) */
-.navbar-brand {
-  font-size: 1.125rem;
-}
-
-.navbar .btn-primary {
-  background-color: #0066ff;
-  border-color: #0066ff;
-}
-
-.navbar .btn-primary:hover {
-  background-color: #0057d6;
-  border-color: #0057d6;
-}
-
-.carousel-img {
-  /* Slightly larger hero */
-  height: 340px; /* desktop */
-  min-height: 220px;
-  max-height: 520px;
-  object-fit: cover;
-  filter: brightness(0.72);
-}
-
-.carousel-caption h1,
-.carousel-caption h2 {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-.carousel-caption p { text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
-
-/* Responsive tweaks for the carousel and captions */
-@media (max-width: 992px) {
-  .carousel-img { height: 260px; min-height: 180px; max-height: 360px; }
-  .carousel-caption h1 { font-size: 1.4rem; }
-  .carousel-caption h2 { font-size: 1.2rem; }
-  .carousel-caption p { font-size: 1rem; }
-}
-
-@media (max-width: 576px) {
-  .carousel-img { height: 200px; min-height: 140px; max-height: 260px; }
-  .carousel-caption { padding-bottom: 0.5rem; }
-  .carousel-caption h1, .carousel-caption h2 { font-size: 1.1rem; }
-  .carousel-caption p { font-size: 0.95rem; }
-  /* On very small screens keep captions compact */
-  .carousel-caption .btn { padding: .4rem .7rem; font-size: .95rem; }
-}
-
-/* Make carousel-item a positioning context and add overlay for better contrast */
-.carousel .carousel-item {
-  position: relative;
-}
-
-.carousel .carousel-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.22));
-  pointer-events: none;
-}
-
-/* Caption layout tweaks */
-.carousel-caption {
-  bottom: 18px;
-  left: 2rem;
-  right: auto;
-  text-align: left;
-  max-width: 55%;
-}
-
-.carousel-caption h1, .carousel-caption h2 { line-height: 1.05; margin-bottom: .35rem; }
-
-/* Indicator size and visibility */
-.carousel-indicators [data-bs-target] {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.carousel-indicators .active { background-color: #0066ff; }
-
-/* Hide captions on very narrow screens to prevent crowding */
-@media (max-width: 420px) {
-  .carousel-caption { display: none; }
-  .carousel-indicators { bottom: -8px; }
-}
-
-.section {
-  padding: 60px 30px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.address {
-  margin-top: 10px;
-  font-weight: bold;
-   margin-top: 10px; 
-   text-decoration: none;
-}
-
-.address a {
-  color: #3360f3;
-  text-decoration: none;
-}
-
-.quick-facts ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-.about-quick-facts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media (min-width: 600px) {
-  .about-quick-facts > * {
-    flex: 1 1 50%;
+/* =========================================
+   1. GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
+   :root {
+    --primary-color: #0d6efd; /* Bootstrap Primary Blue */
+    --dark-overlay: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
+    --text-dark: #333;
+    --text-light: #555;
+    --bg-light: #f8f9fa;
   }
-}
-
-#amenities h2 {
-  text-align: center;
-}
-
-#amenities ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-}
-
-#amenities li {
-  margin: 20px;
-  flex: 1 1 calc(33.33% - 40px);
-
-}
-
-#amenities img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-.contact-feedback-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-/* Each section takes up to 48% of the width */
-.contact-feedback-container .section {
-  flex: 1 1 48%;
-  box-sizing: border-box;
-}
-
-/* Responsive: Stack vertically on small screens */
-@media (max-width: 768px) {
-  .contact-feedback-container {
-    flex-direction: column;
+  
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text-light);
+    background-color: #fff;
+    /* Padding for mobile bottom nav */
+    padding-bottom: 0; 
   }
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-label {
-  margin-bottom: 8px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#feedback{
-  margin-top: 40px;
-}
-
-#feedback h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Reviews (cards) */
-.card img.rounded-circle { object-fit: cover; }
-
-.text-warning .fa { color: #ffc107; }
-
-.card .card-title { margin-bottom: .25rem; }
-
-  .local-services {
-    background-color: #f9f9f9;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
-  .local-services h2 {
-    text-align: center;
+  
+  a {
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
-
-  .local-services ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: auto;
+  
+  /* Bootstrap Override for Navbar */
+  .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
   }
-
-  .local-services li {
-    background: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  /* =========================================
+     2. HERO CAROUSEL (CATCHY & FIXED)
+     ========================================= */
+  .carousel-item {
+    position: relative;
+    background-color: #000; /* Fallback */
   }
-  .local-services img.service-image {
+  
+  /* Dark Gradient Overlay for Text Readability */
+  .carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 280px;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 100%;
+    background: var(--dark-overlay);
+    pointer-events: none;
   }
-  .hotel-name {
-    font-weight: bold;
-    margin-top: 10px;
+  
+  .carousel-img {
+    width: 100%;
+    /* DESKTOP: 500px height + Focus on top-center to show temple tower */
+    height: 500px; 
+    object-fit: cover;
+    object-position: center 20%; 
+    filter: brightness(0.85); /* Slightly brighter for elegance */
   }
-  .description {
-    font-style: italic;
+  
+  /* Caption Styling */
+  .carousel-caption {
+    bottom: 20%;
+    left: 10%;
+    right: auto;
+    text-align: left;
+    max-width: 600px;
+    z-index: 10;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.25rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.9);
+  }
+  
+  /* Button Pulse Animation */
+  .btn-pulse {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+  
+  /* =========================================
+     3. SECTIONS & CARDS (ELEGANT UI)
+     ========================================= */
+  
+  /* General Cards (Amenities, Reviews) */
+  .card, .facility-card {
+    background: #fff;
+    border: none;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  /* Hover Effect: Lift the card up */
+  .card:hover, .facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Facility Icons */
+  .facility-card i {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  /* Local Services Section */
+  .local-services {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+  }
+  
+  .service-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .service-image:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Address Link Style */
+  .address a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--primary-color);
+  }
+  
+  .address a:hover {
+    border-bottom: 1px solid var(--primary-color);
+  }
+  
+  /* =========================================
+     4. MOBILE BOTTOM NAVIGATION (STICKY)
+     ========================================= */
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08); /* Soft shadow up */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    z-index: 1050;
+    height: 65px;
+    border-top: 1px solid #f1f1f1;
+    /* Hidden on desktop by default via d-lg-none in HTML, 
+       but good to safeguard here just in case */
+  }
+  
+  .mobile-bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.75rem; /* Small, readable text */
+    font-weight: 500;
+    width: 20%;
+    transition: color 0.3s;
+  }
+  
+  .mobile-bottom-nav .nav-item i {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
     color: #555;
-    margin-top: 5px;
   }
-
-
-  @media (max-width: 768px) {
-  .about-quick-facts > * {
-    flex: 1 1 100%;
+  
+  /* Active/Book Button Highlight */
+  .mobile-bottom-nav .nav-item.active-nav,
+  .mobile-bottom-nav .nav-item:hover {
+    color: var(--primary-color);
   }
-
-  .contact-feedback-container .section {
-    flex: 1 1 100%;
+  
+  .mobile-bottom-nav .nav-item.active-nav i,
+  .mobile-bottom-nav .nav-item:hover i {
+    color: var(--primary-color);
   }
-
-  .local-services li {
-    flex: 1 1 100%;
+  
+  /* =========================================
+     5. CONTACT FORM & FOOTER
+     ========================================= */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s;
   }
-}
-
-/* Facility card styles */
-.facility-card h5 { font-weight: 600; }
-.facility-card p { color: #666; }
-
-/* Footer */
-footer { background: #111; color: #eee; }
-footer a { color: #ddd; text-decoration: none; }
-footer a:hover { color: #fff; }
-
-/* WhatsApp floating (mobile) */
-.whatsapp-float {
-  position: fixed;
-  width: 56px;
-  height: 56px;
-  bottom: 24px;
-  right: 24px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1050;
-}
-
-/* Small tweaks for accessibility */
-.carousel-caption .btn { opacity: 0.96; }
-
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
+  }
+  
+  footer {
+    background: #1a1a1a;
+    color: #aaa;
+    margin-top: 4rem;
+  }
+  
+  footer h5, footer h6 {
+    color: #fff;
+  }
+  
+  footer a {
+    color: #aaa;
+  }
+  
+  footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* WhatsApp Float Button (Desktop Only) */
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+  }
+  
+  /* =========================================
+     6. RESPONSIVE MEDIA QUERIES
+     ========================================= */
+  
+  /* Tablet (max-width: 992px) */
+  @media (max-width: 992px) {
+    .carousel-img {
+      height: 350px; /* Moderate height for tablets */
+      object-position: center center;
+    }
+    
+    /* Move WhatsApp float up so it doesn't cover bottom nav */
+    .whatsapp-float {
+      bottom: 80px; 
+      width: 50px; 
+      height: 50px; 
+      font-size: 25px;
+    }
+  
+    /* Add padding to body so content isn't hidden behind sticky nav */
+    body {
+      padding-bottom: 70px; 
+    }
+  }
+  
+  /* Mobile (max-width: 576px) */
+  @media (max-width: 576px) {
+    .carousel-img {
+      height: 240px; /* Catchy height for mobile */
+      min-height: 200px;
+    }
+  
+    .carousel-caption {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem;
+      background: transparent; /* Overlay handles the dark bg */
+    }
+  
+    .carousel-caption h1 {
+      font-size: 1.5rem; /* Readable on mobile */
+      margin-bottom: 0.25rem;
+    }
+  
+    .carousel-caption p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .carousel-caption .btn {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      padding: 30px 15px;
+    }
+  }
