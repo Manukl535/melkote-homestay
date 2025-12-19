@@ -1,0 +1,10 @@
+User-agent: \*
+Allow: /
+
+# Prevent crawlers from looking at backend files
+
+Disallow: /inc/
+
+# Sitemap Location
+
+Sitemap: https://melukote.com/sitemap.xml

@@ -349,7 +349,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="terms-container">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms" style="margin:0; font-weight: 400;">
-                        I agree to the <a href="T&C.html">Terms and Policies</a> regarding house rules and
+                        I agree to the <a href="terms.html">Terms and Policies</a> regarding house rules and
                         cancellations.
                     </label>
                 </div>
