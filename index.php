@@ -8,64 +8,76 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <link rel="icon" href="img/preview.png" type="image/png" />
-  <title>Shree Niwasa | Best Pilgrim Stay in Melukote Near Temple</title>
-  
-  <meta name="description" content="Looking for a clean homestay in Melukote? Shree Niwasa offers 2BHK pilgrim accommodation near Cheluvanarayana Swamy Temple. Sleeps 6. Book now at ₹999/day!" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Homestay in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa 2BHK</title>
+
+  <meta name="description" content="Shree Niwasa Homestay in Melukote, Karnataka offers a peaceful and clean 2BHK family stay near Cheluvanarayana Swamy Temple. Ideal for pilgrims and Vairamudi Utsava visitors." />
+
   <link rel="canonical" href="https://melukote.com/" />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="Melukote Room Booking, Melukote Accommodation, Shree Niwasa, Homestay in Melukote, Temple Stay, Cheluvanarayana Swamy Temple Rooms, Vairamudi Utsava Stay, Yatri Nivas Melukote, 2BHK Melukote" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Shree Niwasa" />
 
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://melukote.com/" />
-  <meta property="og:title" content="Shree Niwasa — Affordable Pilgrim Home in Melukote" />
-  <meta property="og:description" content="Stay just minutes away from the temple. Full 2BHK home for families. Clean, safe, and spiritual environment. Only ₹999/day." />
-  <meta property="og:image" content="https://melukote.com/img/preview.png" />
-  
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:image" content="https://melukote.com/img/preview.png" />
+  <meta property="og:title" content="Homestay Near Cheluvanarayana Swamy Temple, Melukote | Shree Niwasa" />
+  <meta property="og:description" content="Comfortable 2BHK homestay for families and pilgrims near Cheluvanarayana Swamy Temple in Melukote, Karnataka." />
+  <meta property="og:image" content="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shree Niwasa Homestay in Melukote" />
+  <meta name="twitter:description" content="Peaceful 2BHK pilgrim homestay near Cheluvanarayana Swamy Temple, Melukote." />
+  <meta name="twitter:image" content="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "BedAndBreakfast",
-        "name": "Shree Niwasa Pilgrim Stay",
-        "description": "Comfortable 2BHK family accommodation for pilgrims near Cheluvanarayana Swamy Temple in Melukote.",
-        "url": "https://melukote.com/",
-        "logo": "https://melukote.com/img/preview.png",
-        "image": "https://melukote.com/img/temple.png",
-        "telephone": "+91-90082-88474",
-        "priceRange": "₹999 - ₹1500", 
-        "checkinTime": "12:00",
-        "checkoutTime": "10:00",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "#379, Megalakere, Near Sabhapathi Mantapa",
-          "addressLocality": "Melukote",
-          "addressRegion": "Karnataka",
-          "postalCode": "571431",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 12.6575, 
-          "longitude": 76.6586
-        }
-      }
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Shree Niwasa Homestay",
+    "alternateName": "Shree Niwasa Melukote",
+    "description": "2BHK family and pilgrim accommodation near Cheluvanarayana Swamy Temple in Melukote, Karnataka.",
+    "url": "https://melukote.com/",
+    "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
+    "logo": "https://melukote.com/img/homestay-melukote-hilltop-view.png",
+    "telephone": "+91-90082-88474",
+    "priceRange": "Rs 999/- per day",
+    "checkinTime": "12:00 pm",
+    "checkoutTime": "10:00 am",
+    "hasMap": "https://maps.google.com/?q=12.6575,76.6586",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "#379, Megalakere, Near Sabhapathi Mantapa",
+      "addressLocality": "Melukote",
+      "addressRegion": "Karnataka",
+      "postalCode": "571431",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.6575,
+      "longitude": 76.6586
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Family Rooms", "value": true }
     ]
+  }
   </script>
 
+  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css" />
@@ -82,7 +94,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#amenities">Facilities</a></li>
           <li class="nav-item"><a class="nav-link" href="#local-services">Food & Travel</a></li>
           <li class="nav-item"><a class="nav-link" href="#feedback">Reviews</a></li>
@@ -92,8 +104,9 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 
         <div class="d-flex align-items-center">
           <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
-          <a href="bookings.php" class="btn btn-primary me-2">Book Now</a>
-          <a href="https://wa.me/+919008288474" class="btn btn-success d-none d-md-inline"><i
+          <a href="bookings.php" class="btn btn-primary me-2"><i class="fa fa-calendar"></i> Book Now</a>
+          <a href="https://wa.me/+919008288474?text=Hello!%20I%20am%20interested%20in%20booking%20a%20homestay%20at%20Shree%20Niwasa%20in%20Melukote."
+              class="btn btn-success d-none d-md-inline"><i
               class="fa fa-whatsapp"></i> WhatsApp</a>
         </div>
       </div>
@@ -102,14 +115,14 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
   
   <nav class="navbar navbar-light bg-light sticky-top shadow-sm d-lg-none">
       <div class="container-fluid justify-content-center">
-          <a class="navbar-brand fw-bold" href="#">Shree Niwasa</a>
+          <a class="navbar-brand fw-bold" href="#">Shree Niwasa - Pilgrim Homestay</a>
       </div>
   </nav>
 
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/temple.png" class="d-block w-100 carousel-img" alt="View of Cheluvanarayana Swamy Temple Melukote">
+        <img src="img/homestay-melukote-hilltop-view.png" class="d-block w-100 carousel-img" alt="View of Cheluvanarayana Swamy Temple Melukote">
         
         <div class="carousel-caption">
           <h1>Shree Niwasa: Pilgrim Home</h1>
@@ -181,14 +194,14 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
         <h2 class="text-center mb-3">Food & Local Services</h2>
         <div class="row align-items-center">
           <div class="col-md-4 text-center">
-            <img src="img/andndamess.png" alt="Ananda Mess Melukote Food" class="service-image img-fluid">
+            <img src="img/homestay-melukote-andnda-mess.png" alt="Ananda Mess Melukote Food" class="service-image img-fluid">
             <p class="hotel-name mt-2 mb-0">Ananda Mess</p>
-            <p class="small text-muted">Authentic Melukote Puliyogare & Meals.</p>
+            <p class="small text-muted">Authentic Melukote Puliyogare, Pongal & Meals.</p>
           </div>
           <div class="col-md-8">
             <p>We want your pilgrimage to be hassle-free. Shree Niwasa partners with trusted local service providers:</p>
             <ul class="list-unstyled">
-              <li><i class="fa fa-check text-success me-2"></i><strong>Vegetarian Food:</strong> Authentic Iyengar Puliyogare delivery.</li>
+              <li><i class="fa fa-check text-success me-2"></i><strong>Vegetarian Food:</strong> Authentic Iyengar Puliyogare, Pongal & Meals delivery.</li>
               <li><i class="fa fa-check text-success me-2"></i><strong>Temple Guides:</strong> Assistance for special darshan.</li>
               <li><i class="fa fa-check text-success me-2"></i><strong>Transport:</strong> Auto-rickshaws available on request.</li>
             </ul>
@@ -250,40 +263,78 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
     </div>
   </main>
 <!-- Whatsapp Button start -->
-    <a href="https://wa.me/+916366667849"
-        style="position:fixed;width:60px;height:60px;bottom:90px;right:30px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:1000;"
-        target="_blank">
-        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-    </a>
-    <!-- Whatsapp Button end -->
+<a href="https://wa.me/+919008288474?text=Hello!%20I%20am%20interested%20in%20booking%20a%20homestay%20at%20Shree%20Niwasa%20in%20Melukote."
+    style="position:fixed;width:60px;height:60px;bottom:90px;right:30px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 3px #999;z-index:1000;"
+    target="_blank">
+    <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
+<!-- Whatsapp Button end -->
 
-  <footer class="bg-dark text-light pt-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <h5>Shree Niwasa</h5>
-          <p class="small">Affordable pilgrim accommodation in Melukote.</p>
-          <p>Visitor Count: <span id="visitor-count"><?php echo $visitorCount; ?></span></p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h6>Address</h6>
-          <p class="small mb-1">
-            #379, Megalakere, Near Sabhapathi Mantapa,<br>
-            Melukote, Pandavapura Taluk,<br>
-            Mandya District, Karnataka – 571431
-          </p>
-          <p class="small mb-1"><i class="fa fa-phone"></i> +91 90082 88474</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="small">© <?php echo date("Y"); ?> Shree Niwasa</div>
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold text-white">Shree Niwasa Homestay</h5>
+        <p class="small text-secondary">
+          The preferred <strong>2BHK homestay in Melukote</strong> for families and pilgrims. Located in the heart of the temple town, providing clean and affordable accommodation near Cheluvanarayana Swamy Temple.
+        </p>
+        <div class="mt-3">
+            <p class="small mb-0">Trusted by <span id="visitor-count" class="text-white fw-bold"><?php echo $visitorCount; ?></span> Visitors</p>
         </div>
       </div>
-    </div>
-  </footer>
 
+      <div class="col-md-4 mb-4">
+        <h6 class="text-white mb-3">Location & Contact</h6>
+        <a href="https://www.google.com/maps/search/?api=1&query=Shree+Niwasa+Melukote" 
+          target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+        <address class="small text-secondary mb-3">
+          <i class="fa fa-map-marker me-2 text-primary"></i>
+          <strong>Shree Niwasa Melukote</strong><br>
+          #379, Megalakere, Near Sabhapathi Mantapa,<br>
+          Melukote, Pandavapura Taluk,<br>
+          Mandya District, Karnataka – 571431
+        </address>
+        </a>
+        <p class="small mb-2">
+            <a href="tel:+919008288474" class="text-secondary text-decoration-none">
+                <i class="fa fa-phone me-2 text-success"></i>+91 90082 88474
+            </a>
+        </p>
+        <p class="small">
+            <a href="mailto:info@melukote.com" class="text-secondary text-decoration-none">
+                <i class="fa fa-envelope me-2 text-info"></i>info@melukote.com
+            </a>
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6 class="text-white mb-3">Explore Melukote</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="index.php" class="text-secondary text-decoration-none">Home</a></li>
+          <li class="mb-2"><a href="gallery.php" class="text-secondary text-decoration-none">Home Gallery</a></li>
+          <li class="mb-2"><a href="bookings.php" class="text-secondary text-decoration-none">Check Availability</a></li>
+          <li class="mb-2"><a href="index.php#local-services" class="text-secondary text-decoration-none">Food & Travel Guide</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <div class="small text-secondary">
+            © <?php echo date("Y"); ?> <strong>Melukote.com</strong> | Shree Niwasa. All Rights Reserved.
+        </div>
+      </div>
+      <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+        <span class="small text-secondary">Best Pilgrim Stay in Melukote, Pandavapura Taluk, Mandya District, Karnataka</span>
+      </div>
+    </div>
+  </div>
+</footer>
   
   <nav class="mobile-bottom-nav d-lg-none">
-    <a href="#" class="nav-item">
+    <a href="#" class="nav-item active-nav">
       <i class="fa fa-home"></i>
       <span>Home</span>
     </a>
@@ -291,7 +342,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
       <i class="fa fa-bed"></i>
       <span>Facilities</span>
     </a>
-    <a href="bookings.php" class="nav-item active-nav">
+    <a href="bookings.php" class="nav-item">
       <i class="fa fa-calendar-check-o"></i>
       <span>Book</span>
     </a>
