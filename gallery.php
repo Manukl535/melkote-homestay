@@ -93,6 +93,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
           <li class="nav-item"><a class="nav-link" href="index.php#feedback">Reviews</a></li>
           <li class="nav-item"><a class="nav-link active" href="gallery.php">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#blogs">Blogs</a></li>
         </ul>
         <div class="d-flex align-items-center">
           <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
