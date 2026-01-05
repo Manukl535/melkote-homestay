@@ -13,10 +13,10 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Rooms & Interiors Gallery | Shree Niwasa Homestay Near Temple, Melukote</title>
+  <title>2BHK Rooms in Melukote | Shree Niwasa Homestay Near Temple</title>
 
   <meta name="description"
-    content="View the photo gallery of Shree Niwasa Homestay in Melukote, Karnataka. Explore our clean 2BHK hall, bedrooms, kitchen, and pilgrim-friendly facilities near Cheluvanarayana Swamy Temple." />
+    content="Book spacious 2BHK rooms in Melukote at Shree Niwasa Homestay near Cheluvanarayana Swamy Temple. Comfortable, clean rooms with hall, kitchen, and modern amenities for family and pilgrim stays." />
 
   <meta name="author" content="Shree Niwasa" />
   <link rel="canonical" href="https://melukote.com/gallery.php" />
@@ -27,9 +27,9 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://melukote.com/gallery.php" />
-  <meta property="og:title" content="Photo Gallery: 2BHK Rooms at Shree Niwasa Homestay, Melukote" />
+  <meta property="og:title" content="2BHK Rooms in Melukote | Shree Niwasa Homestay" />
   <meta property="og:description"
-    content="Take a virtual tour of our spacious 2BHK homestay near Cheluvanarayana Swamy Temple in Melukote." />
+    content="Take a virtual tour of our 2BHK rooms in Melukote at Shree Niwasa Homestay near Cheluvanarayana Swamy Temple. Comfortable rooms for families and pilgrims." />
   <meta property="og:image" content="https://melukote.com/img/homestay-melukote-hall.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,13 +39,15 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
 
+  <!-- Updated Schema.org structured data for rooms -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
     "name": "Shree Niwasa Homestay Room Gallery",
-    "description": "High-quality images of the 2BHK interiors, bedrooms, hall, kitchen, and exterior of Shree Niwasa Homestay near Cheluvanarayana Swamy Temple in Melukote.",
+    "description": "High-quality images of the 2BHK rooms in Melukote, including bedrooms, living hall, kitchen, and exterior of Shree Niwasa Homestay near Cheluvanarayana Swamy Temple.",
     "url": "https://melukote.com/gallery.php",
     "contentLocation": {
       "@type": "Place",
@@ -63,172 +65,20 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
       "url": "https://melukote.com/"
     },
     "image": [
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
-        "name": "Exterior of Shree Niwasa Homestay Melukote",
-        "caption": "Exterior view of Shree Niwasa Homestay near Cheluvanarayana Swamy Temple, Melukote"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-hall.png",
-        "name": "2BHK Living Hall at Shree Niwasa Homestay",
-        "caption": "Spacious living hall inside Shree Niwasa 2BHK homestay in Melukote"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-bedroom.png",
-        "name": "Bedroom at Shree Niwasa Homestay Melukote",
-        "caption": "Clean and comfortable bedroom for pilgrims near Cheluvanarayana Swamy Temple"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-kitchen.png",
-        "name": "Kitchen Facility at Shree Niwasa Homestay",
-        "caption": "Well-maintained kitchen available for family stays at Shree Niwasa Homestay"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-washroom.png",
-        "name": "Washroom at Shree Niwasa Homestay",
-        "caption": "Clean and well-maintained washroom for pilgrims near Cheluvanarayana Swamy Temple"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-utility.png",
-        "name": "Utility Area at Shree Niwasa Homestay",
-        "caption": "Open utility area for relaxation and washing clothes at Shree Niwasa Homestay"
-      },
-      {
-        "@type": "ImageObject",
-        "url": "https://melukote.com/img/homestay-melukote-parking-passage.png",
-        "name": "Proximity to Cheluvanarayana Swamy Temple",
-        "caption": "Parking and safe passage at Shree Niwasa Homestay near Cheluvanarayana Swamy Temple"
-      }
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-shree-niwasa.png","name": "Exterior of Shree Niwasa Homestay Melukote","caption": "Exterior view of Shree Niwasa Homestay near Cheluvanarayana Swamy Temple, Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-hall.png","name": "2BHK Living Hall at Shree Niwasa Homestay","caption": "Spacious living hall inside Shree Niwasa 2BHK rooms in Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-bedroom.png","name": "Bedroom at Shree Niwasa Homestay Melukote","caption": "Clean and comfortable bedroom of 2BHK rooms in Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-kitchen.png","name": "Kitchen Facility at Shree Niwasa Homestay","caption": "Functional kitchen for 2BHK rooms in Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-washroom.png","name": "Washroom at Shree Niwasa Homestay","caption": "Clean washroom in 2BHK rooms in Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-utility.png","name": "Utility Area at Shree Niwasa Homestay","caption": "Open utility area of 2BHK rooms in Melukote"},
+      {"@type": "ImageObject","url": "https://melukote.com/img/homestay-melukote-parking-passage.png","name": "Parking & Passage","caption": "Parking and safe passage near 2BHK rooms in Melukote"}
     ]
   }
   </script>
-
-  <style>
-    /* 🌿 Gallery Specific Styles */
-    body {
-      background-color: #fcfcfc;
-    }
-
-    .page-title {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    .page-title h1 {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-    }
-
-    .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: 0 auto 60px auto;
-    }
-
-    .gallery-card {
-      background: #fff;
-      border: none;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-card:hover img {
-      transform: scale(1.03);
-    }
-
-    .gallery-card .card-body {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .gallery-card .card-body p {
-      font-family: 'Poppins', sans-serif;
-      font-weight: bold;
-      color: #555;
-      margin: 0;
-    }
-
-    .modal-content {
-      border-radius: 16px;
-      border: none;
-      overflow: hidden;
-    }
-
-    .modal-header {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .modal-footer {
-      border-top: none;
-    }
-
-    .modal-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    #modal-features-list {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    #modal-features-list li {
-      margin-bottom: 5px;
-      color: #555;
-    }
-
-    @media (max-width: 768px) {
-      .gallery-container {
-        padding: 15px;
-        gap: 20px;
-        grid-template-columns: 1fr;
-      }
-
-      .modal-body.d-flex {
-        flex-direction: column-reverse;
-      }
-
-      .modal-text,
-      .modal-image {
-        width: 100% !important;
-        padding: 10px !important;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm d-none d-lg-block">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm d-none d-lg-block">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -259,102 +109,98 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
       <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa - Pilgrim Homestay</a>
     </div>
   </nav>
-
   <div class="container page-title">
-    <h1>Our Home</h1>
-    <p class="text-muted small">Tap on any image to see details</p>
+    <h1>2BHK Rooms in Melukote</h1>
+    <p class="text-muted small">Explore our rooms and facilities. Tap on any image to see details.</p>
+    <div class="text-center mb-4">
+      <p>
+        Shree Niwasa Homestay offers spacious and clean <strong>2BHK rooms in Melukote</strong> suitable for families and pilgrims. Each room is thoughtfully designed with modern amenities including bedrooms, living hall, kitchen, and washrooms to ensure a comfortable stay near Cheluvanarayana Swamy Temple.
+      </p>
+    </div>
   </div>
 
-  <div class="gallery-container">
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-exterior.png"
-      data-bs-description="A welcoming front elevation of Shree Niwasa. Secure and homely."
-      data-bs-features="Secure Gated Entry • Private Parking Space • Quiet Neighborhood">
-      <img src="img/homestay-melukote-exterior.png" alt="Shree Niwasa Melukote Front View">
-      <div class="card-body">
-        <p>Front Elevation</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-hall.png" data-bs-description="Spacious hall perfect for family gatherings."
-      data-bs-features="Seating for 10 people • Sofa & Mats Available • Ideal for Bhajans/Events">
-      <img src="img/homestay-melukote-hall.png" alt="Spacious Hall for Pilgrims">
-      <div class="card-body">
-        <p>Spacious Main Hall</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-kitchen.png" data-bs-description="Functional kitchen for basic pilgrim needs."
-      data-bs-features="Basic Utensils • Hot Water Kettle • Counter Space">
-      <img src="img/homestay-melukote-kitchen.png" alt="Kitchen Facility Melukote">
-      <div class="card-body">
-        <p>Kitchen Facility</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="img/bedroom.png"
-      data-bs-description="Restful bedrooms designed for pilgrim comfort."
-      data-bs-features="Double & Single Beds • Clean Linens • Storage Wardrobes">
-      <img src="img/homestay-melukote-bedroom.png" alt="Clean Bedroom in Melukote">
-      <div class="card-body">
-        <p>Master Bedrooms</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-washroom.png" data-bs-description="Hygenic washrooms with 24/7 water supply."
-      data-bs-features="Hot Water Geyser • Western Toilet • Daily Cleaning">
-      <img src="img/homestay-melukote-washroom.png" alt="Hygienic Washroom">
-      <div class="card-body">
-        <p>Hygienic Washroom</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-utility.png" data-bs-description="Open utility area for relaxation or washing."
-      data-bs-features="Seating Area • Fresh Air • Cloth Drying Space">
-      <img src="img/homestay-melukote-utility.png" alt="Utility Area">
-      <div class="card-body">
-        <p>Utility & Sit-out</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-parking-passage.png"
-      data-bs-description="Safe passage and parking for vehicles."
-      data-bs-features="2-Wheeler Parking • Gated Compound • Safe & Secure">
-      <img src="img/homestay-melukote-parking-passage.png" alt="Parking Passage">
-      <div class="card-body">
-        <p>Parking & Passage</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-temple.png"
-      data-bs-description="Shree Niwasa Homestay located within walking distance of Cheluvanarayana Swamy Temple."
-      data-bs-features="Walking Distance to Cheluvanarayana Swamy Temple • Near Vairamudi Utsava Route">
-      <img src="img/homestay-melukote-temple.png"
-        alt="Homestay near Cheluvanarayana Swamy Temple in Melukote within walking distance">
-      <div class="card-body">
-        <p>Temple Proximity</p>
-      </div>
-    </div>
-
-    <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
-      data-bs-img="img/homestay-melukote-hilltop-view.png"
-      data-bs-description="Hilltop surroundings and peaceful view near Shree Niwasa Homestay in Melukote."
-      data-bs-features="Scenic Hill View • Calm and Peaceful Surroundings">
-      <img src="img/homestay-melukote-hilltop-view.png"
-        alt="Hilltop view near Shree Niwasa Homestay in Melukote Karnataka">
-      <div class="card-body">
-        <p>Hilltop View</p>
-      </div>
-    </div>
-
+<div class="gallery-container">
+  <!-- 1. Exterior (first impression) -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-exterior.png"
+    data-bs-description="A welcoming front elevation of Shree Niwasa. Secure and homely."
+    data-bs-features="Secure Gated Entry • Private Parking Space • Quiet Neighborhood">
+    <img src="img/homestay-melukote-exterior.png" alt="Shree Niwasa Homestay Front Elevation - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Front Elevation</p></div>
   </div>
+
+  <!-- 2. Spacious Hall / Living Room -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-hall.png"
+    data-bs-description="Spacious hall perfect for family gatherings, relaxation, and community events."
+    data-bs-features="Seating for 10 people • Sofa & Mats Available • Ideal for Bhajans/Events">
+    <img src="img/homestay-melukote-hall.png" alt="Spacious Living Hall - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Spacious Main Hall</p></div>
+  </div>
+
+  <!-- 3. Bedrooms -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/bedroom.png"
+    data-bs-description="Restful bedrooms designed for pilgrim comfort with clean linens and ample storage."
+    data-bs-features="Double & Single Beds • Clean Linens • Storage Wardrobes">
+    <img src="img/homestay-melukote-bedroom.png" alt="Master Bedroom - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Master Bedrooms</p></div>
+  </div>
+
+  <!-- 4. Kitchen -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-kitchen.png"
+    data-bs-description="Functional kitchen with basic utensils for cooking or preparing meals conveniently."
+    data-bs-features="Basic Utensils • Hot Water Kettle • Counter Space">
+    <img src="img/homestay-melukote-kitchen.png" alt="Kitchen Facility - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Kitchen Facility</p></div>
+  </div>
+
+  <!-- 5. Washrooms -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-washroom.png"
+    data-bs-description="Hygienic washrooms with 24/7 water supply and modern fittings."
+    data-bs-features="Hot Water Geyser • Western Toilet • Daily Cleaning">
+    <img src="img/homestay-melukote-washroom.png" alt="Washroom - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Hygienic Washroom</p></div>
+  </div>
+
+  <!-- 6. Utility / Sit-out -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-utility.png"
+    data-bs-description="Open utility area for relaxation, fresh air, or washing clothes."
+    data-bs-features="Seating Area • Fresh Air • Cloth Drying Space">
+    <img src="img/homestay-melukote-utility.png" alt="Utility Area - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Utility & Sit-out</p></div>
+  </div>
+
+  <!-- 7. Parking & Passage -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-parking-passage.png"
+    data-bs-description="Safe passage and parking for vehicles."
+    data-bs-features="2-Wheeler Parking • Gated Compound • Safe & Secure">
+    <img src="img/homestay-melukote-parking-passage.png" alt="Parking & Passage - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Parking & Passage</p></div>
+  </div>
+
+  <!-- 8. Temple Proximity -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-temple.png"
+    data-bs-description="Shree Niwasa Homestay located within walking distance of Cheluvanarayana Swamy Temple."
+    data-bs-features="Walking Distance to Cheluvanarayana Swamy Temple • Near Vairamudi Utsava Route">
+    <img src="img/homestay-melukote-temple.png" alt="Temple Proximity - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Temple Proximity</p></div>
+  </div>
+
+  <!-- 9. Scenic Hilltop View (bonus / desire feature) -->
+  <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+    data-bs-img="img/homestay-melukote-hilltop-view.png"
+    data-bs-description="Hilltop surroundings and peaceful view near Shree Niwasa Homestay in Melukote."
+    data-bs-features="Scenic Hill View • Calm and Peaceful Surroundings">
+    <img src="img/homestay-melukote-hilltop-view.png" alt="Hilltop View - 2BHK Rooms in Melukote">
+    <div class="card-body"><p>Hilltop View</p></div>
+  </div>
+</div>
 
   <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -475,7 +321,33 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
     </a>
   </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+  <script>
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    galleryCards.forEach(card => {
+      card.addEventListener('click', function () {
+        const imgSrc = card.getAttribute('data-bs-img');
+        const description = card.getAttribute('data-bs-description');
+        const features = card.getAttribute('data-bs-features').split('•').map(feature => feature.trim());
+        document.getElementById('modal-image').src = imgSrc;
+        document.getElementById('modal-description-text').textContent = description;
+        const featuresList = document.getElementById('modal-features-list');
+        featuresList.innerHTML = '';
+        features.forEach(feature => {
+          const li = document.createElement('li');
+          li.textContent = feature;
+          featuresList.appendChild(li);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
+
+
 
   <script>
     const galleryCards = document.querySelectorAll('.gallery-card');

@@ -1,10 +1,16 @@
-User-agent: \*
+User-agent: *
 Allow: /
-
-# Prevent crawlers from looking at backend files
-
+# Block backend and system files to save "Crawl Budget"
 Disallow: /inc/
+Disallow: /css/
+Disallow: /js/
+Disallow: /config.php
+Disallow: /connection.php
+
+# Help Google find your most important "Room" and "Blog" pages
+Allow: /gallery.php
+Allow: /bookings.php
+Allow: /index.php
 
 # Sitemap Location
-
 Sitemap: https://melukote.com/sitemap.xml
