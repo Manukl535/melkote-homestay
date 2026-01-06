@@ -368,7 +368,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
               <h5>1 Day Trip Plan for Melukote</h5>
               <p class="small text-muted">A one-day trip plan for Melukote, a popular tourist destination in Karnataka.
               </p>
-              <a href="#" class="btn btn-primary">Read More</a>
+              <a href="blogs-melukote/1-day-trip-plan-for-melukote.php" class="btn btn-primary">Read More</a>
             </div>
           </div>
           <div class="col-md-4">
