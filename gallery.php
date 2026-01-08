@@ -350,25 +350,4 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 
 
 
-  <script>
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    galleryCards.forEach(card => {
-      card.addEventListener('click', function () {
-        const imgSrc = card.getAttribute('data-bs-img');
-        const description = card.getAttribute('data-bs-description');
-        const features = card.getAttribute('data-bs-features').split('•').map(feature => feature.trim());
-        document.getElementById('modal-image').src = imgSrc;
-        document.getElementById('modal-description-text').textContent = description;
-        const featuresList = document.getElementById('modal-features-list');
-        featuresList.innerHTML = '';
-        features.forEach(feature => {
-          const li = document.createElement('li');
-          li.textContent = feature;
-          featuresList.appendChild(li);
-        });
-      });
-    });
-  </script>
-</body>
-
-</html>
+ 
