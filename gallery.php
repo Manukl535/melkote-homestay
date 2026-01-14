@@ -1,10 +1,3 @@
-<?php
-// gallery.php
-session_start();
-include 'inc/connection.php';
-// Default visitor count if database connection fails
-$visitorCount = isset($visitorCount) ? $visitorCount : 1000; 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,38 +71,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm d-none d-lg-block">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php#amenities">Facilities</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php#local-services">Food & Travel</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php#feedback">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.php">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php#blogs">Blogs</a></li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
-          <a href="bookings.php" class="btn btn-primary me-2"><i class="fa fa-calendar"></i> Book Now</a>
-          <a href="https://wa.me/+919008288474?text=Hello!%20I%20am%20interested%20in%20booking%20a%20homestay%20at%20Shree%20Niwasa%20in%20Melukote."
-            class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-light bg-light sticky-top shadow-sm d-lg-none">
-    <div class="container-fluid justify-content-center">
-      <a class="navbar-brand fw-bold" href="index.php">Shree Niwasa - Pilgrim Homestay</a>
-    </div>
-  </nav>
+<?php include 'inc/header.php'; ?>
   <div class="container page-title">
     <h1>2BHK Rooms in Melukote</h1>
     <p class="text-muted small">Explore our rooms and facilities. Tap on any image to see details.</p>
@@ -236,95 +198,12 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
 </a>
 <!-- Whatsapp Button end -->
 
-<footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold text-white">Shree Niwasa Homestay</h5>
-        <p class="small text-secondary">
-          The preferred <strong>2BHK homestay in Melukote</strong> for families and pilgrims. Located in the heart of the temple town, providing clean and affordable accommodation near Cheluvanarayana Swamy Temple.
-        </p>
-        <div class="mt-3">
-            <p class="small mb-0">Trusted by <span id="visitor-count" class="text-white fw-bold"><?php echo $visitorCount; ?></span> Visitors</p>
-        </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <h6 class="text-white mb-3">Location & Contact</h6>
-        <a href="https://www.google.com/maps/search/?api=1&query=Shree+Niwasa+Melukote" 
-          target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-        <address class="small text-secondary mb-3">
-          <i class="fa fa-map-marker me-2 text-primary"></i>
-          <strong>Shree Niwasa Melukote</strong><br>
-          #379, Megalakere, Near Sabhapathi Mantapa,<br>
-          Melukote, Pandavapura Taluk,<br>
-          Mandya District, Karnataka – 571431
-        </address>
-        </a>
-        <p class="small mb-2">
-            <a href="tel:+919008288474" class="text-secondary text-decoration-none">
-                <i class="fa fa-phone me-2 text-success"></i>+91 90082 88474
-            </a>
-        </p>
-        <p class="small">
-            <a href="mailto:info@melukote.com" class="text-secondary text-decoration-none">
-                <i class="fa fa-envelope me-2 text-info"></i>info@melukote.com
-            </a>
-        </p>
-      </div>
+  <?php include 'inc/footer.php'; ?>
 
-      <div class="col-md-4 mb-4">
-        <h6 class="text-white mb-3">Explore Melukote</h6>
-        <ul class="list-unstyled small">
-          <li class="mb-2"><a href="index.php" class="text-secondary text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="gallery.php" class="text-secondary text-decoration-none">Home Gallery</a></li>
-          <li class="mb-2"><a href="bookings.php" class="text-secondary text-decoration-none">Check Availability</a></li>
-          <li class="mb-2"><a href="index.php#local-services" class="text-secondary text-decoration-none">Food & Travel Guide</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <hr class="border-secondary my-4">
-
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-start">
-        <div class="small text-secondary">
-            © <?php echo date("Y"); ?> <strong>Melukote.com</strong> | Shree Niwasa. All Rights Reserved.
-        </div>
-      </div>
-      <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-        <span class="small text-secondary">Best Pilgrim Stay in Melukote, Pandavapura Taluk, Mandya District, Karnataka</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-  <nav class="mobile-bottom-nav d-lg-none">
-    <a href="index.php" class="nav-item">
-      <i class="fa fa-home"></i>
-      <span>Home</span>
-    </a>
-    <a href="index.php#amenities" class="nav-item">
-      <i class="fa fa-bed"></i>
-      <span>Facilities</span>
-    </a>
-    <a href="bookings.php" class="nav-item">
-      <i class="fa fa-calendar-check-o"></i>
-      <span>Book</span>
-    </a>
-    <a href="gallery.php" class="nav-item active-nav">
-      <i class="fa fa-image"></i>
-      <span>Gallery</span>
-    </a>
-    <a href="tel:+919008288474" class="nav-item">
-      <i class="fa fa-phone"></i>
-      <span>Call</span>
-    </a>
-  </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
- 
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
     const galleryCards = document.querySelectorAll('.gallery-card');
     galleryCards.forEach(card => {
