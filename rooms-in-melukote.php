@@ -1,6 +1,6 @@
 <?php
 // index.php
-session_start();
+
 include 'inc/connection.php';
 
 // Default visitor count if database connection fails
