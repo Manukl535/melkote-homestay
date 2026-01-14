@@ -22,6 +22,6 @@
 *.sql
 
 # Ignore specific directories
-inc/
+inc/connection.php
 
 
