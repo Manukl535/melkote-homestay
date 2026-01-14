@@ -84,7 +84,7 @@ if ($conn) {
   <div class="container">
 
     <a class="navbar-brand fw-bold" href="index.php">
-      <img src="img/thrinama-removebg-preview.png"
+      <img src="img/thrinama.png"
            width="30" height="30"
            class="d-inline-block align-top"
            alt="Shree Niwasa"
