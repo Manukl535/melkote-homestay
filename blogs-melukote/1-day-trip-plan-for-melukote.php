@@ -38,7 +38,7 @@
             <div class="place">
                 <h3>Yoganarasimha Temple</h3>
                 <img src="img/yoganarasimha-temple-melukote.png" alt="Yoganarasimha Temple Melukote">
-                <p>At the entrance of the town, a left turn leads to the hilltop Yoganarasimha Temple. Visitors can climb nearly 1,000 steps or drive partway and walk the remaining distance—recommended due to the steep ascent. The temple enshrines Lord Narasimha in a meditative pose, and the hilltop offers stunning views of the countryside.</p>
+                <p>At the entrance of the town, a left turn leads to the hilltop Yoganarasimha Temple. Visitors can climb nearly 1,000 steps or drive partway and walk the remaining distance recommended due to the steep ascent. The temple enshrines Lord Narasimha in a meditative pose, and the hilltop offers stunning views of the countryside.</p>
                 <p><strong>Timings:</strong> 7:00 am – 1:00 pm, 5:00 pm – 8:30 pm</p>
             </div>
 
@@ -58,7 +58,7 @@
             <div class="place">
                 <h3>Akka Thangi Kola</h3>
                 <img src="img/akka-tangi-kola-melukote.png" alt="Akka Thangi Kola Melukote">
-                <p>Behind the Cheluvanarayana Swamy Temple lie two adjacent ponds known as Akka Thangi Kola. According to belief, one contains salty water while the other is fresh—a curious and unique sight.</p>
+                <p>Behind the Cheluvanarayana Swamy Temple lie two adjacent ponds known as Akka Thangi Kola. According to belief, one contains salty water while the other is fresh a curious and unique sight.</p>
             </div>
 
             <div class="place">
@@ -69,12 +69,13 @@
 
             <div class="place">
                 <h3>Sanskrit Academy</h3>
-                
+                <img src="img/sanskrit-academy-melukote.png" alt="Sanskrit Academy Melukote">
                 <p>Near Raya Dwara is the Sanskrit Academy, home to a library containing a valuable collection of ancient manuscripts and scriptures.</p>
             </div>
 
             <div class="place">
                 <h3>Danush Koti</h3>
+                <img src="img/danush-koti-melukote.png" alt="Danush Koti Melukote">
                 <p>About 1.5 km ahead on the same road lies Danush Koti, accessible after a short walk of nearly one kilometre. Tradition holds that a crack in the rock here was formed by Lord Rama’s arrow. A natural spring flows through it, keeping the spot lush and peaceful. The viewpoint also offers sweeping vistas of the surrounding farmlands.</p>
             </div>
         </section>
@@ -106,7 +107,7 @@
     </main>
 
     <footer>
-        <p>© 2026 A Perfect Day Trip to Melukote. All rights reserved.</p>
+        <p>© 2026 Melukote.com | Shree Niwasa. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
