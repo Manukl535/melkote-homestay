@@ -111,6 +111,7 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
+  
 </head>
 
 <body>
@@ -120,7 +121,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="img/homestay-melukote-hilltop-view.png" fetchpriority="high" class="d-block w-100 carousel-img"
-          alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay">
+          alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay" loading="lazy">
         <div class="carousel-caption">
           <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
           <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
@@ -130,43 +131,237 @@
     </div>
   </div>
 
-  <!-- Hero Banner & About Homestay Start -->
-  <main class="mt-5">
-    <div class="container">
-      <div class="row mb-5 about-quick-facts">
-        <div id="about" class="col-lg-6">
-          <h2>About Our Melukote Homestay</h2>
-          <p>
-            Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
-            Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
-            spiritual environment for families visiting for darshan or the <strong>Vairamudi Utsava</strong>.
-          </p>
-          <p>
-            Unlike expensive hotels, our <strong>homestay contribution is just ₹999/- per day</strong>,
-            providing a clean "home away from home" for devotees.
-          </p>
-          <p class="address">
-            <i class="fa fa-map-marker text-primary"></i>
-            <a href="https://maps.google.com/?q=Shree+Niwasa+Homestay+Melukote" target="_blank" rel="noopener">
-              <strong>Location:</strong> #379, Megalakere, Near Sabhapathi Mantapa, Melukote, KA 571431
-            </a>
-          </p>
-        </div>
-        <div class="col-lg-6 quick-facts">
-          <h3>Stay Details</h3>
-          <ul class="list-unstyled">
-            <li><i class="fa fa-home text-success me-2"></i><strong>Type:</strong> 2BHK House (Hall, Kitchen, 2
-              Bedrooms)</li>
-            <li><i class="fa fa-users text-success me-2"></i><strong>Capacity:</strong> Max 6 guests (Family Friendly)
-            </li>
-            <li><i class="fa fa-clock-o text-success me-2"></i><strong>Check-in:</strong> 12:00 PM |
-              <strong>Check-out:</strong> 10:00 AM</li>
-            <li><i class="fa fa-whatsapp text-success me-2"></i><strong>Booking:</strong> <a
-                href="tel:+919008288474">+91 90082 88474</a></li>
-          </ul>
-        </div>
+ <!-- Hero Banner & About Homestay Start -->
+<main class="mt-5">
+  <div class="container">
+    <div class="row mb-5 about-quick-facts">
+
+      <!-- About Section -->
+      <div id="about" class="col-lg-6">
+        <h2>About Our Melukote Homestay</h2>
+        <p>
+          Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
+          Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
+          spiritual environment for families visiting for darshan or the <strong>Vairamudi Utsava</strong>.
+        </p>
+        <p>
+          Unlike expensive hotels, our <strong>homestay contribution is just ₹999/- per day</strong>,
+          providing a clean "home away from home" for devotees.
+        </p>
+        <p class="address">
+          <i class="fa fa-map-marker text-primary"></i>
+          <a href="https://maps.google.com/?q=Shree+Niwasa+Homestay+Melukote"
+             target="_blank" rel="noopener">
+            <strong>Location:</strong> #379, Megalakere, Near Sabhapathi Mantapa,
+            Melukote, KA 571431
+          </a>
+        </p>
       </div>
-      <!-- Hero Banner & About Homestay End -->
+
+      <!-- Stay Details + Availability -->
+      <div class="col-lg-6 quick-facts">
+        <h3>Stay Details</h3>
+        <ul class="list-unstyled mb-2">
+          <li>
+            <i class="fa fa-home text-success me-2"></i>
+            <strong>Type:</strong> 2BHK House (Hall, Kitchen, 2 Bedrooms)
+          </li>
+          <li>
+            <i class="fa fa-users text-success me-2"></i>
+            <strong>Capacity:</strong> Max 8 guests (Family Friendly, 4 Adults | 4 Children)
+          </li>
+          <li>
+            <i class="fa fa-clock-o text-success me-2"></i>
+            <strong>Check-in:</strong> 12:00 PM |
+            <strong>Check-out:</strong> 10:00 AM
+          </li>
+          <li>
+            <i class="fa fa-whatsapp text-success me-2"></i>
+            <strong>Booking:</strong>
+            <a href="tel:+919008288474">+91 90082 88474</a>
+          </li>
+        </ul>
+
+        <!-- Compact Availability Calendar -->
+        <div class="mt-3"
+             style="border-top:1px dashed #ddd; padding-top:10px;">
+
+          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">
+            Availability Calendar
+          </div>
+
+          <!-- Legend -->
+          <div style="font-size:0.75rem; margin-bottom:6px; color:#555;">
+            <span style="
+              display:inline-block;
+              width:10px;
+              height:10px;
+              border-radius:50%;
+              background:#28a745;
+              margin-right:4px;
+              vertical-align:middle;"></span> Available
+
+            <span style="
+              display:inline-block;
+              width:10px;
+              height:10px;
+              border-radius:50%;
+              background:#dc3545;
+              margin-left:10px;
+              margin-right:4px;
+              vertical-align:middle;"></span> Booked
+          </div>
+
+          <!-- Calendar Grid -->
+          <div id="calendarGrid"
+               style="
+                display:grid;
+                grid-template-columns:repeat(7, 1fr);
+                gap:4px;
+                text-align:center;
+                font-size:0.7rem;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Hero Banner & About Homestay End -->
+
+<script>
+(function () {
+
+  const grid = document.getElementById('calendarGrid');
+  if (!grid) return;
+
+  let viewDate = new Date(); // current visible month
+
+  // 🔄 Month navigation container
+  const nav = document.createElement('div');
+  nav.style.fontSize = '0.75rem';
+  nav.style.marginBottom = '6px';
+  nav.style.display = 'flex';
+  nav.style.justifyContent = 'space-between';
+  nav.style.alignItems = 'center';
+
+  const prev = document.createElement('span');
+  prev.textContent = '◀ Prev';
+  prev.style.cursor = 'pointer';
+
+  const monthName = document.createElement('span');
+  monthName.style.fontWeight = '600';
+
+  const next = document.createElement('span');
+  next.textContent = 'Next ▶';
+  next.style.cursor = 'pointer';
+
+  nav.appendChild(prev);
+  nav.appendChild(monthName);
+  nav.appendChild(next);
+
+  grid.parentNode.insertBefore(nav, grid);
+
+  function renderCalendar() {
+    grid.innerHTML = '';
+
+    const year  = viewDate.getFullYear();
+    const month = viewDate.getMonth(); // 0-based
+
+    // ✅ UPDATE MONTH LABEL DYNAMICALLY
+    monthName.textContent = viewDate.toLocaleString('default', {
+      month: 'long',
+      year: 'numeric'
+    });
+
+    fetch(`fetch_bookings.php?year=${year}&month=${month + 1}`)
+      .then(res => res.json())
+      .then(booked => drawCalendar(year, month, booked))
+      .catch(err => console.error('Fetch error:', err));
+  }
+
+  function drawCalendar(year, month, booked) {
+
+    const days = ['S','M','T','W','T','F','S'];
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    // Day headers
+    days.forEach(d => {
+      const el = document.createElement('div');
+      el.textContent = d;
+      el.style.fontWeight = '600';
+      grid.appendChild(el);
+    });
+
+    const firstDay  = new Date(year, month, 1).getDay();
+    const totalDays = new Date(year, month + 1, 0).getDate();
+
+    // Empty slots
+    for (let i = 0; i < firstDay; i++) {
+      grid.appendChild(document.createElement('div'));
+    }
+
+    // Dates
+    for (let d = 1; d <= totalDays; d++) {
+
+      const cellDate = new Date(year, month, d);
+      cellDate.setHours(0,0,0,0);
+
+      const mm = String(month + 1).padStart(2, '0');
+      const dd = String(d).padStart(2, '0');
+      const key = `${year}-${mm}-${dd}`;
+
+      const cell = document.createElement('div');
+      cell.style.padding = '4px 0';
+      cell.style.borderRadius = '4px';
+      cell.style.fontWeight = '600';
+
+      // ❌ Past dates
+      if (cellDate < today) {
+        cell.textContent = '✕';
+        cell.style.background = '#f1f1f1';
+        cell.style.color = '#999';
+        cell.title = 'Past date';
+      }
+      // 🔴 Booked + Cleaning
+      else if (booked.includes(key)) {
+        cell.textContent = d;
+        cell.style.background = '#f8d7da';
+        cell.style.color = '#842029';
+        cell.title = 'Booked';
+      }
+      // 🟢 Available
+      else {
+        cell.textContent = d;
+        cell.style.background = '#e6f4ea';
+        cell.style.color = '#1e7e34';
+        cell.title = 'Available';
+      }
+
+      grid.appendChild(cell);
+    }
+  }
+
+  // Navigation actions
+  prev.onclick = () => {
+    viewDate.setMonth(viewDate.getMonth() - 1);
+    renderCalendar();
+  };
+
+  next.onclick = () => {
+    viewDate.setMonth(viewDate.getMonth() + 1);
+    renderCalendar();
+  };
+
+  // Initial render
+  renderCalendar();
+
+})();
+</script>
+
+
+     <!-- Hero Banner & About Homestay End -->
 
 
       <!-- Facilities Start -->
