@@ -332,9 +332,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 <div class="col-md-4">
                   <div class="form-floating">
-                    <input type="number" class="form-control" id="adults" name="adults" min="1" max="6" value="1"
+                    <input type="number" class="form-control" id="adults" name="adults" min="1" max="4" value="1"
                       required>
-                    <label for="adults">Adults (Max 6)</label>
+                    <label for="adults">Adults (Max 4)</label>
                   </div>
                 </div>
 
@@ -342,7 +342,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                   <div class="form-floating">
                     <input type="number" class="form-control" id="children" name="children" min="0" max="4" value="0"
                       required>
-                    <label for="children">Children</label>
+                    <label for="children">Children (Max 4)</label>
                   </div>
                 </div>
 
