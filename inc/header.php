@@ -160,6 +160,11 @@ if ($conn) {
 <nav class="navbar navbar-light bg-light sticky-top shadow-sm d-lg-none">
   <div class="container-fluid justify-content-center">
     <a class="navbar-brand fw-bold" href="index.php">
+      <img src="img/thrinama.png"
+           width="30" height="30"
+           class="d-inline-block align-top"
+           alt="Shree Niwasa"
+           style="padding-top:2px;">
       Shree Niwasa – Pilgrim Homestay
     </a>
   </div>

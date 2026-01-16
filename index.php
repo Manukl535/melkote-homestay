@@ -116,6 +116,20 @@
 <body>
   <?php include 'inc/header.php'; ?>
 
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/homestay-melukote-hilltop-view.png" fetchpriority="high" class="d-block w-100 carousel-img"
+          alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay">
+        <div class="carousel-caption">
+          <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
+          <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
+          <a href="bookings.php" class="btn btn-primary btn-pulse fw-bold px-4">Check Availability</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Banner & About Homestay Start -->
   <main class="mt-5">
     <div class="container">
