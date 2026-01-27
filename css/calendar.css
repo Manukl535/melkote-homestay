@@ -1,0 +1,30 @@
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  font-size: 0.7rem;
+}
+
+.calendar-day {
+  padding: 6px 0;
+  border-radius: 4px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.calendar-day.booked {
+  background: #fdecea;
+  color: #c62828;
+  font-weight: 600;
+}
+
+.legend {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:4px;
+}
+
+.legend.available { background:#28a745; }
+.legend.booked { background:#dc3545; }
