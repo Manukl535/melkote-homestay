@@ -18,7 +18,7 @@
   </url>
 
   <url>
-    <loc>https://melukote.com/gallery.php</loc>
+    <loc>https://melukote.com/shree-niwasa-homestay-gallery.php</loc>
     <lastmod>2026-01-05</lastmod>
     <image:image>
       <image:loc>https://melukote.com/img/homestay-melukote-exterior.png</image:loc>
@@ -39,7 +39,7 @@
   </url>
 
   <url>
-    <loc>https://melukote.com/terms.php</loc>
+    <loc>https://melukote.com/terms-and-conditions.php</loc>
     <lastmod>2025-12-19</lastmod>
   </url>
   <url>
@@ -51,5 +51,12 @@
     <loc>https://melukote.com/1-day-trip-for-melukote.php</loc>
     <lastmod>2026-01-05</lastmod> 
   </url>
+
+  <url>
+    <loc>https://melukote.com/shree-niwasa-homestay-in-melukote-booking-instructions.php</loc>
+    <lastmod>2026-01-05</lastmod>
+  </url>
+
+
 
 </urlset>
