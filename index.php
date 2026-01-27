@@ -111,27 +111,45 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/calendar.css" />
   
 </head>
 
 <body>
   <?php include 'inc/header.php'; ?>
 
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/homestay-melukote-hilltop-view.png" fetchpriority="high" class="d-block w-100 carousel-img"
-          alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay" loading="lazy">
-        <div class="carousel-caption">
-          <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
-          <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
-          <a href="bookings.php" class="btn btn-primary btn-pulse fw-bold px-4">Check Availability</a>
-        </div>
+  <!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img
+        src="img/homestay-melukote-hilltop-view.png"
+        fetchpriority="high"
+        class="d-block w-100 carousel-img"
+        alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay"
+        loading="lazy"
+      >
+
+      <div class="carousel-caption">
+        <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
+        <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
+
+        <!-- CHECK AVAILABILITY -->
+        <a
+          href="#availability"
+          class="btn btn-primary btn-pulse fw-bold px-4"
+          id="checkAvailabilityBtn"
+        >
+          Check Availability
+        </a>
       </div>
     </div>
-  </div>
 
- <!-- Hero Banner & About Homestay Start -->
+  </div>
+</div>
+
+<!-- Hero Banner & About Homestay Start -->
 <main class="mt-5">
   <div class="container">
     <div class="row mb-5 about-quick-facts">
@@ -142,18 +160,20 @@
         <p>
           Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
           Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
-          spiritual environment for families visiting for darshan or the <strong>Vairamudi Utsava</strong>.
+          spiritual environment for families visiting for darshan or the
+          <strong>Vairamudi Utsava</strong>.
         </p>
         <p>
-          Unlike expensive hotels, our <strong>homestay contribution is just ₹999/- per day</strong>,
-          providing a clean "home away from home" for devotees.
+          Unlike expensive hotels, our <strong>homestay contribution is just ₹999/day</strong>,
+          providing a clean home-like stay for devotees.
         </p>
+
         <p class="address">
           <i class="fa fa-map-marker text-primary"></i>
           <a href="https://maps.google.com/?q=Shree+Niwasa+Homestay+Melukote"
              target="_blank" rel="noopener">
-            <strong>Location:</strong> #379, Megalakere, Near Sabhapathi Mantapa,
-            Melukote, KA 571431
+            <strong>Location:</strong>
+            #379, Megalakere, Near Sabhapathi Mantapa, Melukote, KA 571431
           </a>
         </p>
       </div>
@@ -162,16 +182,9 @@
       <div class="col-lg-6 quick-facts">
         <h3>Stay Details</h3>
         <ul class="list-unstyled mb-2">
-          <li>
-            <i class="fa fa-home text-success me-2"></i>
-            <strong>Type:</strong> 2BHK House (Hall, Kitchen, 2 Bedrooms)
-          </li>
-          <li>
-            <i class="fa fa-users text-success me-2"></i>
-            <strong>Capacity:</strong> Max 8 guests (Family Friendly, 4 Adults | 4 Children)
-          </li>
-          <li>
-            <i class="fa fa-clock-o text-success me-2"></i>
+          <li><i class="fa fa-home text-success me-2"></i> <strong>Type:</strong> 2BHK House</li>
+          <li><i class="fa fa-users text-success me-2"></i> <strong>Capacity:</strong> Max 8 guests</li>
+          <li><i class="fa fa-clock-o text-success me-2"></i>
             <strong>Check-in:</strong> 12:00 PM |
             <strong>Check-out:</strong> 10:00 AM
           </li>
@@ -183,45 +196,18 @@
         </ul>
 
         <!-- Compact Availability Calendar -->
-        <div class="mt-3"
-             style="border-top:1px dashed #ddd; padding-top:10px;">
-
-          <div style="font-weight:600; font-size:0.95rem; margin-bottom:6px;">
-            Availability Calendar
-          </div>
+        <section class="availability-calendar mt-3 border-top pt-2">
+          <h3 style="font-size:0.95rem; font-weight:600;">Availability Calendar</h3>
 
           <!-- Legend -->
-          <div style="font-size:0.75rem; margin-bottom:6px; color:#555;">
-            <span style="
-              display:inline-block;
-              width:10px;
-              height:10px;
-              border-radius:50%;
-              background:#28a745;
-              margin-right:4px;
-              vertical-align:middle;"></span> Available
-
-            <span style="
-              display:inline-block;
-              width:10px;
-              height:10px;
-              border-radius:50%;
-              background:#dc3545;
-              margin-left:10px;
-              margin-right:4px;
-              vertical-align:middle;"></span> Booked
+          <div style="font-size:0.75rem; margin-bottom:6px;">
+            <span class="legend available"></span> Available
+            <span class="legend booked"></span> Booked
           </div>
 
           <!-- Calendar Grid -->
-          <div id="calendarGrid"
-               style="
-                display:grid;
-                grid-template-columns:repeat(7, 1fr);
-                gap:4px;
-                text-align:center;
-                font-size:0.7rem;">
-          </div>
-        </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </section>
 
       </div>
     </div>
@@ -268,7 +254,6 @@
     const year  = viewDate.getFullYear();
     const month = viewDate.getMonth(); // 0-based
 
-    // ✅ UPDATE MONTH LABEL DYNAMICALLY
     monthName.textContent = viewDate.toLocaleString('default', {
       month: 'long',
       year: 'numeric'
@@ -302,7 +287,6 @@
       grid.appendChild(document.createElement('div'));
     }
 
-    // Dates
     for (let d = 1; d <= totalDays; d++) {
 
       const cellDate = new Date(year, month, d);
@@ -313,6 +297,7 @@
       const key = `${year}-${mm}-${dd}`;
 
       const cell = document.createElement('div');
+      cell.textContent = d;
       cell.style.padding = '4px 0';
       cell.style.borderRadius = '4px';
       cell.style.fontWeight = '600';
@@ -324,23 +309,49 @@
         cell.style.color = '#999';
         cell.title = 'Past date';
       }
-      // 🔴 Booked + Cleaning
+
+      // 🔴 Booked
       else if (booked.includes(key)) {
-        cell.textContent = d;
         cell.style.background = '#f8d7da';
         cell.style.color = '#842029';
         cell.title = 'Booked';
       }
-      // 🟢 Available
+
+      // 🟢 Available (CLICKABLE)
       else {
-        cell.textContent = d;
         cell.style.background = '#e6f4ea';
         cell.style.color = '#1e7e34';
-        cell.title = 'Available';
+        cell.style.cursor = 'pointer';
+        cell.title = 'Available – click to book';
+
+        cell.onclick = () => {
+          scrollToBooking(key);
+        };
       }
 
       grid.appendChild(cell);
     }
+  }
+
+  // 📅 Scroll + prefill booking form
+  function scrollToBooking(dateStr) {
+    const section = document.getElementById('availability');
+    const checkIn = document.getElementById('checkInPicker');
+
+    if (!section || !checkIn) return;
+
+    section.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      checkIn.value = dateStr;
+      document.getElementById('check_in').value = dateStr;
+
+      // If Flatpickr instance exists, set date properly
+      if (checkIn._flatpickr) {
+        checkIn._flatpickr.setDate(dateStr, true);
+        checkIn._flatpickr.open();
+      }
+    }, 600);
   }
 
   // Navigation actions
@@ -354,7 +365,6 @@
     renderCalendar();
   };
 
-  // Initial render
   renderCalendar();
 
 })();
