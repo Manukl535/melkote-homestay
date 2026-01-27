@@ -8,7 +8,7 @@ Disallow: /config.php
 Disallow: /connection.php
 
 # Help Google find your most important "Room" and "Blog" pages
-Allow: /gallery.php
+Allow: /shree-niwasa-homestay-gallery.php
 Allow: /bookings.php
 Allow: /index.php
 
