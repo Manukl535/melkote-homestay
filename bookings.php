@@ -18,7 +18,7 @@ if ($res && $res->num_rows > 0) {
   while ($r = $res->fetch_assoc()) {
     $booked_dates[] = [
       "from" => $r["check_in"],
-      "to"   => $r["check_out"]
+      "to" => $r["check_out"]
     ];
   }
 }
@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $phone = trim($_POST["phone"]);
   $address = trim($_POST["address"]);
   $aadhar = trim($_POST["aadhar_num"]);
-  $adults = (int)$_POST["adults"];
-  $children = (int)$_POST["children"];
+  $adults = (int) $_POST["adults"];
+  $children = (int) $_POST["children"];
   $check_in = $_POST["check_in"];
   $check_out = $_POST["check_out"];
 
@@ -59,9 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       ");
       $stmt->bind_param(
         "sssiisss",
-        $name, $address, $phone,
-        $adults, $children, $aadhar,
-        $check_in, $check_out
+        $name,
+        $address,
+        $phone,
+        $adults,
+        $children,
+        $aadhar,
+        $check_in,
+        $check_out
       );
 
       if ($stmt->execute()) {
@@ -260,12 +265,203 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       color: #d32f2f !important;
       text-decoration: line-through;
     }
-  </style>
+
+ /* Disclaimer Modal - Enhanced */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 30px 35px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    position: relative;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  @keyframes slideDown {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+    font-size: 26px;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 12px;
+  }
+
+  .modal-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #27ae60;
+  }
+
+  .modal-content p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .close:hover {
+    color: #e74c3c;
+  }
+
+  .agree-btn {
+    display: block;
+    width: 150px;
+    margin: 25px auto 0 auto;
+    padding: 12px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .agree-btn:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  .agree-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Scrollbar styling for modal content */
+  .modal-content::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 25px 20px;
+    }
+
+    .modal-content h2 {
+      font-size: 22px;
+    }
+
+    .modal-content h3 {
+      font-size: 16px;
+    }
+
+    .agree-btn {
+      width: 130px;
+      font-size: 15px;
+      padding: 10px 18px;
+    }
+  }  </style>
 </head>
 
 <body>
   <?php include 'inc/header.php'; ?>
-  
+  <!-- Disclaimer Modal -->
+  <div id="disclaimerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2>Disclaimer</h2>
+
+      <p>
+        The information on <strong>www.melukote.com</strong> is provided for general informational purposes only.
+        While we make every effort to ensure accuracy, <strong>Shree Niwasa - Melukote  Homestay</strong> and its
+        family
+        cannot guarantee the completeness or suitability of the information, services, or content on this Website.
+      </p>
+
+      <h3>Booking & Availability</h3>
+      <p>
+        Accommodation is subject to availability and may change without prior notice. During special cultural and
+        religious periods,
+        including <strong>Vairamudi Brahmotsava (27 Mar-6 Apr 2026)</strong>, <strong>2 Jul 2026</strong>,
+        <strong>Rajamudi Utsav (3 Aug 2026)</strong>, and <strong>17-20 Nov 2026</strong>, our family may occupy the
+        property,
+        which could limit availability. We kindly advise guests to confirm bookings in advance.
+      </p>
+
+      <h3>Use of Property</h3>
+      <p>
+        This is a family home extended to guests in the spirit of hospitality, cultural respect, and spiritual
+        convenience.
+        Guests are requested to use the property considerately and refrain from any activities inconsistent with a
+        peaceful
+        family environment.
+      </p>
+
+      <h3>Limitation of Liability</h3>
+      <p>
+        <strong>Shree Niwasa - Melukote  Homestay</strong> shall not be liable for any loss or damage, including
+        indirect
+        or consequential loss, arising from the use of this Website or bookings made through it.
+      </p>
+
+      <p>
+        By using this Website and making a booking, you kindly acknowledge and agree to this Disclaimer and the
+        applicable
+        <strong><a href="terms-and-conditions.php">Terms & Conditions</a></strong>.
+      </p>
+
+      <button onclick="closeModal()" class="agree-btn">I Agree</button>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      document.getElementById("disclaimerModal").style.display = "block";
+    };
+
+    function closeModal() {
+      document.getElementById("disclaimerModal").style.display = "none";
+    }
+  </script>
+
+
   <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -277,7 +473,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p class="text-center text-muted mb-4">
               <span class="badge bg-primary fs-6">Contribution: ₹999/day</span>
             </p>
-
+            <p class="text-center text-muted mb-4">Need Instructions for booking? 
+              <a href="shree-niwasa-homestay-in-melukote-booking-instructions.php">Click here</a></p>
             <?php if (isset($success_message)): ?>
               <div class="alert alert-success text-center"><?php echo $success_message; ?></div>
             <?php elseif (isset($error_message)): ?>
@@ -349,7 +546,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="col-12 text-center mt-3">
                   <p class="small text-muted mb-0">
                     By clicking "Confirm Booking", you agree to our
-                    <a href="terms.html" target="_blank" class="text-decoration-underline">Terms & House Rules</a>.
+                    <a href="terms-and-conditions.php" target="_blank" class="text-decoration-underline">Terms & 
+                      Rules</a>.
                   </p>
                 </div>
 
@@ -369,56 +567,53 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
   </div>
 
- <!-- PAYMENT MODAL -->
-<div class="modal fade" id="paymentModal" tabindex="-1" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4 rounded-4 border-0">
+  <!-- PAYMENT MODAL -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4 rounded-4 border-0">
 
-      <!-- Header -->
-      <div class="modal-header border-0 justify-content-center pb-0">
-        <i class="fa fa-check-circle text-success fa-4x mb-2"></i>
-      </div>
-
-      <!-- Body -->
-      <div class="modal-body">
-        <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">
-          Booking Confirmed!
-        </h3>
-
-        <p class="text-muted fs-5 mb-3">
-          Scan & Pay<br>
-          <strong class="text-dark">
-            ₹<?= $price_per_day ?> × <?= $days ?> days = ₹<?= $total_cost ?? 0 ?>
-          </strong>
-        </p>
-
-        <div class="p-3 bg-light rounded d-inline-block mb-3 border">
-          <img src="<?= $qr_code_url ?? '' ?>"
-               alt="UPI Payment QR"
-               class="img-fluid"
-               style="max-width: 200px;">
+        <!-- Header -->
+        <div class="modal-header border-0 justify-content-center pb-0">
+          <i class="fa fa-check-circle text-success fa-4x mb-2"></i>
         </div>
 
-        <p class="small text-muted mb-2">
-          UPI ID: <strong><?= htmlspecialchars($upi_id ?? '') ?></strong><br>
-          Amount will be auto-filled in your UPI app.
-        </p>
+        <!-- Body -->
+        <div class="modal-body">
+          <h3 class="mb-2" style="font-family: 'Playfair Display', serif;">
+            Booking Confirmed!
+          </h3>
 
-        <p class="small text-muted mb-0">
-          Once paid, please share the screenshot on WhatsApp.
-        </p>
+          <p class="text-muted fs-5 mb-3">
+            Scan & Pay<br>
+            <strong class="text-dark">
+              ₹<?= $price_per_day ?> × <?= $days ?> days = ₹<?= $total_cost ?? 0 ?>
+            </strong>
+          </p>
+
+          <div class="p-3 bg-light rounded d-inline-block mb-3 border">
+            <img src="<?= $qr_code_url ?? '' ?>" alt="UPI Payment QR" class="img-fluid" style="max-width: 200px;">
+          </div>
+
+          <p class="small text-muted mb-2">
+            UPI ID: <strong><?= htmlspecialchars($upi_id ?? '') ?></strong><br>
+            Amount will be auto-filled in your UPI app.
+          </p>
+
+          <p class="small text-muted mb-0">
+            Once paid, please share the screenshot on WhatsApp.
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer border-0 justify-content-center">
+          <a href="index.php" class="btn btn-outline-secondary px-4">
+            Home
+          </a>
+        </div>
+
       </div>
-
-      <!-- Footer -->
-      <div class="modal-footer border-0 justify-content-center">
-        <a href="index.php" class="btn btn-outline-secondary px-4">
-          Home
-        </a>
-      </div>
-
     </div>
   </div>
-</div>
 
   <!-- Whatsapp Button start -->
   <a href="https://wa.me/+919008288474?text=Hello!%20I%20am%20interested%20in%20booking%20a%20homestay%20at%20Shree%20Niwasa%20in%20Melukote."
@@ -428,42 +623,122 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </a>
   <!-- Whatsapp Button end -->
 
-<?php include 'inc/footer.php'; ?>
+  <?php include 'inc/footer.php'; ?>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <script>
-    const bookedDates = <?php echo $booked_dates_json; ?>;
+    // -----------------------------
+    // ELEMENT REFERENCES (SAFE)
+    // -----------------------------
+    const bookingForm = document.getElementById('bookingForm');
+    const dateRange = document.getElementById('dateRange');
+    const checkIn = document.getElementById('check_in');
+    const checkOut = document.getElementById('check_out');
+    const nightsCalc = document.getElementById('nightsCalc');
 
-    flatpickr("#dateRange", {
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const aadharInput = document.getElementById('aadhar_num');
+
+    const bookedDates = <?= $booked_dates_json ?>;
+    const PRICE_PER_DAY = 999;
+
+    // -----------------------------
+    // DATE PICKER
+    // -----------------------------
+    flatpickr(dateRange, {
       mode: "range",
       minDate: "today",
       dateFormat: "Y-m-d",
       disable: bookedDates,
-      onChange: function (selectedDates, dateStr, instance) {
+
+      onChange(selectedDates, dateStr, instance) {
         if (selectedDates.length === 2) {
-          document.getElementById('check_in').value = instance.formatDate(selectedDates[0], "Y-m-d");
-          document.getElementById('check_out').value = instance.formatDate(selectedDates[1], "Y-m-d");
 
-          const diffTime = Math.abs(selectedDates[1] - selectedDates[0]);
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-          const price_per_day = 999;
-          const cost = diffDays * price_per_day;
+          const start = selectedDates[0];
+          const end = selectedDates[1];
+          const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
 
-          document.getElementById('nightsCalc').innerHTML =
-            `<i class="fa fa-check"></i> ${diffDays} Days selected. Total Contribution: <strong>₹${cost}</strong>`;
+          if (days < 1) {
+            instance.clear();
+            nightsCalc.innerHTML =
+              "<span class='text-danger'>Minimum stay is 1 day</span>";
+            checkIn.value = "";
+            checkOut.value = "";
+            return;
+          }
+
+          checkIn.value = instance.formatDate(start, "Y-m-d");
+          checkOut.value = instance.formatDate(end, "Y-m-d");
+
+          nightsCalc.innerHTML =
+            `<i class="fa fa-check"></i> ${days} day(s) Selected.
+           Total Contribution: <strong>₹${days * PRICE_PER_DAY}</strong>`;
+        }
+      },
+
+      onClose(selectedDates) {
+        if (selectedDates.length !== 2) {
+          checkIn.value = "";
+          checkOut.value = "";
+          nightsCalc.innerHTML = "";
         }
       }
     });
 
-    <?php if (isset($show_payment_modal) && $show_payment_modal): ?>
-      const myModal = new bootstrap.Modal(document.getElementById('paymentModal'));
-      myModal.show();
-    <?php endif; ?>
+    // -----------------------------
+    // HELPERS
+    // -----------------------------
+    function onlyDigits(el) {
+      el.value = el.value.replace(/\D/g, '');
+    }
+
+    function setValidity(el, isValid) {
+      el.classList.remove('is-valid', 'is-invalid');
+      el.classList.add(isValid ? 'is-valid' : 'is-invalid');
+    }
+
+    // -----------------------------
+    // LIVE VALIDATION
+    // -----------------------------
+    nameInput.addEventListener('input', () => {
+      const valid = /^[A-Za-z\s]{3,}$/.test(nameInput.value.trim());
+      setValidity(nameInput, valid);
+    });
+
+    phoneInput.addEventListener('input', () => {
+      onlyDigits(phoneInput);
+      setValidity(phoneInput, phoneInput.value.length === 10);
+    });
+
+    aadharInput.addEventListener('input', () => {
+      onlyDigits(aadharInput);
+      setValidity(aadharInput, aadharInput.value.length === 4);
+    });
+
+    // -----------------------------
+    // FORM SUBMIT GUARD
+    // -----------------------------
+    bookingForm.addEventListener('submit', function (e) {
+
+      const invalidFields = bookingForm.querySelectorAll('.is-invalid');
+
+      if (!checkIn.value || !checkOut.value || invalidFields.length > 0) {
+        e.preventDefault();
+        alert("Please complete all fields correctly before submitting.");
+        return false;
+      }
+    });
   </script>
 
+  <?php if (!empty($show_payment_modal)): ?>
+    <script>
+      new bootstrap.Modal(document.getElementById('paymentModal')).show();
+    </script>
+  <?php endif; ?>
 </body>
 
 </html>
