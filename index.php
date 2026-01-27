@@ -137,7 +137,7 @@
 
         <!-- CHECK AVAILABILITY -->
         <a
-          href="#availability"
+          href="bookings.php"
           class="btn btn-primary btn-pulse fw-bold px-4"
           id="checkAvailabilityBtn"
         >
