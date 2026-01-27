@@ -7,34 +7,97 @@
 
   <!-- SEO META -->
   <title>How to Book Shree Niwasa Homestay in Melukote | Online Booking Guide</title>
-  <meta name="description" content="Step-by-step guide to book your stay at Shree Niwasa Homestay, Melukote. Learn how to select dates, confirm booking, make UPI payment, and complete reservation easily." />
-  <meta name="keywords" content="Shree Niwasa Homestay booking, Melukote homestay booking, Melukote accommodation, temple town stay, homestay near Cheluvanarayana Temple" />
-  <meta name="author" content="Shree Niwasa Homestay" />
-  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹999. Book your pilgrim stay today!" />
 
-  <!-- OPEN GRAPH (SOCIAL SEO) -->
-  <meta property="og:title" content="How to Book Shree Niwasa Homestay – Melukote" />
-  <meta property="og:description" content="Official booking instructions for Shree Niwasa Homestay. Simple steps, transparent pricing, and secure UPI payment." />
+  <!-- Performance -->
+  <link rel="preload" as="image" href="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
+
+  <link rel="canonical" href="https://melukote.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Shree Niwasa" />
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.melukote.com/booking-instructions" />
-  <meta property="og:site_name" content="Shree Niwasa Homestay" />
+  <meta property="og:site_name" content="Shree Niwasa Melukote" />
+  <meta property="og:url" content="https://melukote.com/" />
+  <meta property="og:title" content="Homestay in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa" />
+  <meta property="og:description"
+    content="Clean and comfortable 2BHK family homestay near Cheluvanarayana Swamy Temple, Melukote." />
+  <meta property="og:image" content="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
+  <meta property="og:image:alt" content="Clean and spacious rooms at Shree Niwasa Homestay Melukote" />
 
-  <!-- SCHEMA (RICH RESULTS) -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shree Niwasa Homestay in Melukote" />
+  <meta name="twitter:description" content="Affordable 2BHK homestay near Cheluvanarayana Swamy Temple, Melukote." />
+  <meta name="twitter:image" content="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Shree Niwasa Homestay",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melukote",
-      "addressRegion": "Karnataka",
-      "addressCountry": "IN"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": ["LodgingBusiness", "Hotel"],
+      "@id": "https://melukote.com/#business",
+      "name": "Shree Niwasa Homestay",
+      "alternateName": "Shree Niwasa Melukote",
+      "description": "Clean and comfortable 2BHK family and pilgrim accommodation near Cheluvanarayana Swamy Temple in Melukote, Karnataka.",
+      "url": "https://melukote.com/",
+      "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
+      "telephone": "+919008288474",
+      "priceRange": "₹999–₹1500",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI",
+      "checkinTime": "12:00:00",
+      "checkoutTime": "10:00:00",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "hasMap": "https://maps.google.com/?q=12.6575,76.6586",
+      "sameAs": [
+        "https://www.google.com/maps/place/?q=12.6575,76.6586"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#379, Megalakere, Near Sabhapathi Mantapa",
+        "addressLocality": "Melukote",
+        "addressRegion": "Karnataka",
+        "postalCode": "571431",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.6575,
+        "longitude": 76.6586
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Family Rooms", "value": true }
+      ],
+      "containsPlace": {
+        "@type": "Accommodation",
+        "name": "2BHK Family Suite",
+        "numberOfRooms": 2,
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "maxValue": 6
+        }
+      }
     },
-    "priceRange": "₹999 per day",
-    "url": "https://www.melukote.com",
-    "telephone": "+91-9008288474"
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://melukote.com/"
+      }]
+    }
+  ]
   </script>
 
 <style>
