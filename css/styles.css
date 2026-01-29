@@ -49,10 +49,7 @@
    transition: box-shadow 0.3s ease;
 }
 
-/* Shadow after scrolling */
-.navbar.scrolled {
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
-}
+
 
 /* Add top padding to body to prevent content hiding behind navbar */
 body {
