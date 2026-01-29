@@ -73,6 +73,10 @@
 <body>
 <?php include 'inc/header.php'; ?>
   <div class="container page-title">
+      <!-- Marquee for special occasions -->
+   <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
+    Be a part of the Sri Vairamudi Utsava from 27th March 2026 to 5th April 2026 and take blessings from Lord Cheluvanarayana Swamy. 
+     </marquee>
     <h1>2BHK Rooms in Melukote</h1>
     <p class="text-muted small">Explore our rooms and facilities. Tap on any image to see details.</p>
     <div class="text-center mb-4">

@@ -77,78 +77,48 @@ if ($conn) {
   }
 }
 ?>
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 10){
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
 <!-- ===========================
      Desktop Navigation
 =========================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm d-none d-lg-block">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm d-none d-lg-flex">
   <div class="container">
-
     <a class="navbar-brand fw-bold" href="index.php">
-      <img src="img/thrinama.png" width="30" height="30" class="d-inline-block align-top" alt="Shree Niwasa"
-        style="padding-top:2px;">
+      <img src="img/thrinama.png" width="30" height="30" class="d-inline-block align-top" alt="Shree Niwasa" style="padding-top:2px;">
       Shree Niwasa
     </a>
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-
-        <li class="nav-item">
-          <a class="nav-link <?= isActivePage('index.php'); ?>" href="index.php">
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.php#amenities">
-            Facilities
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.php#feedback">
-            Reviews
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link <?= isActivePage('shree-niwasa-homestay-gallery.php'); ?>"
-            href="shree-niwasa-homestay-gallery.php">
-            Gallery
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.php#contact">
-            Contact
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.php#blogs">
-            Blogs
-          </a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link <?= isActivePage('index.php'); ?>" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php#amenities">Facilities</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php#feedback">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link <?= isActivePage('shree-niwasa-homestay-gallery.php'); ?>" href="shree-niwasa-homestay-gallery.php">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.php#blogs">Blogs</a></li>
       </ul>
 
       <div class="d-flex align-items-center">
-        <span class="me-3 text-primary small d-none d-lg-inline">
-          <strong>Rooms from ₹999/- Per Day</strong>
-        </span>
-
-        <a href="bookings.php" class="btn btn-primary me-2 <?= isActivePage('bookings.php'); ?>">
-          <i class="fa fa-calendar"></i> Book Now
-        </a>
-
-        <a href="https://wa.me/919008288474" class="btn btn-success d-none d-md-inline">
-          <i class="fa fa-whatsapp"></i> WhatsApp
-        </a>
+        <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
+        <a href="bookings.php" class="btn btn-primary me-2 <?= isActivePage('bookings.php'); ?>"><i class="fa fa-calendar"></i> Book Now</a>
+        <a href="https://wa.me/919008288474" class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i> WhatsApp</a>
       </div>
-
     </div>
   </div>
 </nav>
+
 <!-- Desktop Navigation End -->
 
 <!-- ===========================

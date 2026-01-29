@@ -270,7 +270,7 @@ $visitorCount = isset($visitorCount) ? $visitorCount : 1000;
           <p>
             Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
             Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
-            spiritual environment for families visiting for darshan or the <strong>Vairamudi Utsava</strong>.
+            spiritual environment for families visiting for darshan or the <strong>Sri Vairamudi Utsava</strong>.
           </p>
           <p>
             Unlike expensive hotels, our <strong>homestay contribution is just ₹999/- per day</strong>,

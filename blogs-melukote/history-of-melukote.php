@@ -278,7 +278,7 @@ a:hover {
     <p>
         Over centuries, Melukote developed as an <em>agrahara</em> settlement, sustaining temple
         culture through ritual, music, poetry, and festivals. The annual
-        <strong>Vairamudi Brahmotsava</strong>, during which the deity is adorned with the jewelled
+        <strong>Sri Vairamudi Brahmotsava</strong>, during which the deity is adorned with the jewelled
         crown and taken in procession, draws hundreds of thousands of devotees.
     </p>
 </section>

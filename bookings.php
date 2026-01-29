@@ -420,7 +420,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <p>
         Accommodation is subject to availability and may change without prior notice. During special cultural and
         religious periods,
-        including <strong>Vairamudi Brahmotsava (27 Mar-6 Apr 2026)</strong>, <strong>2 Jul 2026</strong>,
+        including <strong>Sri Vairamudi Brahmotsava (27 Mar-6 Apr 2026)</strong>, <strong>2 Jul 2026</strong>,
         <strong>Rajamudi Utsav (3 Aug 2026)</strong>, and <strong>17-20 Nov 2026</strong>, our family may occupy the
         property,
         which could limit availability. We kindly advise guests to confirm bookings in advance.

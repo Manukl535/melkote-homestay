@@ -263,7 +263,7 @@
             <h2>6. Festival & Family Occupancy</h2>
             <p>During major religious festivals and family events, including but not limited to:</p>
             <ul>
-                <li>Vairamudi Brahmotsava (27 March - 6 April 2026)</li>
+                <li>Sri Vairamudi Brahmotsava (27 March - 6 April 2026)</li>
                 <li>2 July 2026</li>
                 <li>Rajamudi Utsav (3 August 2026)</li>
                 <li>17 Nov - 20 Nov 2026</li>

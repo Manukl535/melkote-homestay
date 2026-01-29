@@ -118,39 +118,88 @@
 <body>
   <?php include 'inc/header.php'; ?>
 
-  <!-- HERO CAROUSEL -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+<!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  
+  <!-- Indicators (dots) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+      class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+  </div>
+
   <div class="carousel-inner">
 
+    <!-- SLIDE 1 -->
     <div class="carousel-item active">
       <img
         src="img/homestay-melukote-hilltop-view.png"
         fetchpriority="high"
         class="d-block w-100 carousel-img"
         alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay"
-        loading="lazy"
       >
 
       <div class="carousel-caption">
         <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
         <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
 
-        <!-- CHECK AVAILABILITY -->
-        <a
-          href="bookings.php"
-          class="btn btn-primary btn-pulse fw-bold px-4"
-          id="checkAvailabilityBtn"
-        >
+        <a href="bookings.php"
+           class="btn btn-primary btn-pulse fw-bold px-4">
           Check Availability
         </a>
       </div>
     </div>
 
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <img
+        src="img/lord-cheluvanarayana-swamy-melukote-in-vairumudi.png"
+        class="d-block w-100 carousel-img"
+        alt="Comfortable rooms at Shree Niwasa Homestay in Melukote"
+        loading="lazy"
+      >
+
+      <div class="carousel-caption">
+        <h1>Join the Vairamudi Utsava (27 Mar -5 Apr 2026)</h1>
+        <p>Receive the blessings of Lord Cheluvanarayana Swamy.</p>
+
+        <a href="https://www.youtube.com/live/6v5icJOGZv0?si=m0cZfeESCH56-AEt"
+           class="btn btn-primary btn-pulse fw-bold px-4">
+          Watch Previous Utsava (2025)
+        </a> &nbsp;&nbsp;
+        <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php"
+           class="btn btn-outline-light fw-bold px-4 ">
+          Know More
+        </a>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
 </div>
 
 <!-- Hero Banner & About Homestay Start -->
 <main class="mt-5">
+  <!-- Marquee for special occasions -->
+   <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
+    Be a part of the Sri Vairamudi Utsava from 27th March 2026 to 5th April 2026 and take blessings from Lord Cheluvanarayana Swamy. 
+     </marquee>
+  
   <div class="container">
     <div class="row mb-5 about-quick-facts">
 
@@ -161,7 +210,7 @@
           Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
           Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
           spiritual environment for families visiting for darshan or the
-          <strong>Vairamudi Utsava</strong>.
+          <strong>Sri Vairamudi Utsava</strong>.
         </p>
         <p>
           Unlike expensive hotels, our <strong>homestay contribution is just ₹999/day</strong>,
@@ -223,7 +272,7 @@
 
   let viewDate = new Date(); // current visible month
 
-  // 🔄 Month navigation container
+  // Month navigation container
   const nav = document.createElement('div');
   nav.style.fontSize = '0.75rem';
   nav.style.marginBottom = '6px';
@@ -232,14 +281,14 @@
   nav.style.alignItems = 'center';
 
   const prev = document.createElement('span');
-  prev.textContent = '◀ Prev';
+  prev.textContent = '< Prev ';
   prev.style.cursor = 'pointer';
 
   const monthName = document.createElement('span');
   monthName.style.fontWeight = '600';
 
   const next = document.createElement('span');
-  next.textContent = 'Next ▶';
+  next.textContent = 'Next >';
   next.style.cursor = 'pointer';
 
   nav.appendChild(prev);
@@ -302,27 +351,27 @@
       cell.style.borderRadius = '4px';
       cell.style.fontWeight = '600';
 
-      // ❌ Past dates
+      // X Past dates
       if (cellDate < today) {
-        cell.textContent = '✕';
+        cell.textContent = 'X';
         cell.style.background = '#f1f1f1';
         cell.style.color = '#999';
         cell.title = 'Past date';
       }
 
-      // 🔴 Booked
+      //  Booked
       else if (booked.includes(key)) {
         cell.style.background = '#f8d7da';
         cell.style.color = '#842029';
-        cell.title = 'Booked';
+        // cell.title = 'Booked';
       }
 
-      // 🟢 Available (CLICKABLE)
+      //  Available
       else {
         cell.style.background = '#e6f4ea';
         cell.style.color = '#1e7e34';
         cell.style.cursor = 'pointer';
-        cell.title = 'Available – click to book';
+        // cell.title = 'Available – click to book';
 
         cell.onclick = () => {
           scrollToBooking(key);
@@ -333,7 +382,7 @@
     }
   }
 
-  // 📅 Scroll + prefill booking form
+  // Scroll + prefill booking form
   function scrollToBooking(dateStr) {
     const section = document.getElementById('availability');
     const checkIn = document.getElementById('checkInPicker');
@@ -371,7 +420,7 @@
 </script>
 
 
-     <!-- Hero Banner & About Homestay End -->
+     <!-- Hero Banner,Calendar & About Homestay End -->
 
 
       <!-- Facilities Start -->
@@ -429,13 +478,12 @@
       <section id="blogs" class="mb-5">
         <h2 class="text-center mb-4">Blogs & Latest Updates</h2>
         <div class="row g-4 text-center">
-          <div class="col-md-4">
+              <div class="col-md-4">
             <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-road fa-2x text-primary mb-3"></i>
-              <h5>1 Day Trip Plan for Melukote</h5>
-              <p class="small text-muted">A one-day trip plan for Melukote, a popular tourist destination in Karnataka.
-              </p>
-              <a href="blogs-melukote/1-day-trip-plan-for-melukote.php" class="btn btn-primary">Read More</a>
+              <i class="fa fa- fa-2x text-primary mb-3"></i>
+              <h5>Sri Vairamudi Utsava 2026 </h5>
+              <p class="small text-muted">Annual ritual in Melukote for Lord Cheluvanarayana Swamy Melukote.</p>
+              <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php " class="btn btn-primary">Read More</a>
             </div>
           </div>
           <div class="col-md-4">
@@ -454,6 +502,31 @@
               <a href="blogs-melukote/history-of-melukote.php " class="btn btn-primary">Read More</a>
             </div>
           </div>
+        </div> <br>
+        
+        <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <div class="facility-card p-4 shadow-sm border rounded">
+              <i class="fa fa-road fa-2x text-primary mb-3"></i>
+              <h5>1 Day Trip Plan for Melukote</h5>
+              <p class="small text-muted">A one-day trip plan for Melukote, a popular tourist destination in Karnataka.
+              </p>
+              <a href="blogs-melukote/1-day-trip-plan-for-melukote.php" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="facility-card p-4 shadow-sm border rounded">
+              <i class="fa fa-calendar fa-2x text-primary mb-3"></i>
+              <h5>Melukote Calendar Of Events</h5>
+              <p class="small text-muted">A calendar of upcoming events in Melukote, including festivals and
+                cultural activities.
+              </p>
+              <a href="blogs-melukote/melukote-temple-annual-events.php" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+        </div>
         </div>
       </section>
       <!-- Blogs & Latest Updates End -->
