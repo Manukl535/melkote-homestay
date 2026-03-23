@@ -304,33 +304,29 @@
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Check if the user has already seen this in the current session
-    if (!sessionStorage.getItem('vairumudiShown')) {
-      
-      // 2. Add a slight delay (2000ms = 2 seconds) so the page feels natural
+    // 1. Check if the modal has already been shown in this session
+    const hasSeenModal = sessionStorage.getItem('vairumudiShown');
+    const modalElement = document.getElementById('vairumudiModal');
+
+    if (!hasSeenModal && modalElement) {
+      // 2. Initialize the modal properly using Bootstrap's constructor
+      const vairumudiModal = new bootstrap.Modal(modalElement, {
+        keyboard: true,
+        backdrop: true // Ensures it behaves like a standard popup
+      });
+
+      // 3. Show after a short delay for better UX
       setTimeout(function() {
-        var myModal = new bootstrap.Modal(document.getElementById('vairumudiModal'));
-        myModal.show();
-        
-        // 3. Mark as shown so it doesn't repeat on every refresh
+        vairumudiModal.show();
+        // 4. Set the flag so it doesn't show again until the browser is closed
         sessionStorage.setItem('vairumudiShown', 'true');
-      }, 2000); 
+      }, 1500);
     }
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Initialize the Bootstrap modal
-    var invitationModal = new bootstrap.Modal(document.getElementById('vairumudiModal'));
-    
-    // Show the modal automatically
-    invitationModal.show();
-  });
-</script>
+
 
 <script>
-
-
 (function () {
 
   const grid = document.getElementById('calendarGrid');
