@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -101,7 +102,7 @@
   </script>
 
   <!-- Fonts & CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
@@ -112,523 +113,518 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/calendar.css" />
-  
+
 </head>
 
 <body>
   <?php include 'inc/header.php'; ?>
 
-<!-- HERO CAROUSEL -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-  
-  <!-- Indicators (dots) -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
-      class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-      aria-label="Slide 2"></button>
-  </div>
+  <!-- HERO CAROUSEL -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-  <div class="carousel-inner">
-
-    <!-- SLIDE 1 -->
-    <div class="carousel-item active">
-      <img
-        src="img/homestay-melukote-hilltop-view.png"
-        fetchpriority="high"
-        class="d-block w-100 carousel-img"
-        alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay"
-      >
-
-      <div class="carousel-caption">
-        <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
-        <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
-
-        <a href="bookings.php"
-           class="btn btn-primary btn-pulse fw-bold px-4">
-          Check Availability
-        </a>
-      </div>
+    <!-- Indicators (dots) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
 
+    <div class="carousel-inner">
 
-    <!-- SLIDE 2 -->
-    <div class="carousel-item">
-      <img
-        src="img/lord-cheluvanarayana-swamy-melukote-in-vairumudi.png"
-        class="d-block w-100 carousel-img"
-        alt="Comfortable rooms at Shree Niwasa Homestay in Melukote"
-        loading="lazy"
-      >
+      <!-- SLIDE 1 -->
+      <div class="carousel-item active">
+        <img src="img/homestay-melukote-hilltop-view.png" fetchpriority="high" class="d-block w-100 carousel-img"
+          alt="Hilltop view of Cheluvanarayana Swamy Temple near Shree Niwasa Homestay">
 
-      <div class="carousel-caption">
-        <h1>Join the Vairamudi Utsava (27 Mar -5 Apr 2026)</h1>
-        <p>Receive the blessings of Lord Cheluvanarayana Swamy.</p>
+        <div class="carousel-caption">
+          <h1>Shree Niwasa: 2BHK Homestay in Melukote Near Temple</h1>
+          <p>Clean, Peaceful & Affordable Pilgrim Accommodation.</p>
 
-        <a href="https://www.youtube.com/live/6v5icJOGZv0?si=m0cZfeESCH56-AEt"
-           class="btn btn-primary btn-pulse fw-bold px-4">
-          Watch Previous Utsava (2025)
-        </a> &nbsp;&nbsp;
-        <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php"
-           class="btn btn-outline-light fw-bold px-4 ">
-          Know More
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button"
-          data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-
-  <button class="carousel-control-next" type="button"
-          data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-
-</div>
-
-<!-- Hero Banner & About Homestay Start -->
-<main class="mt-5">
-  <!-- Marquee for special occasions -->
-<marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
-  🚩 Sri Vairamudi Brahmotsava 2026 | Grand Kiritadharana Mahotsava: Saturday, March 28th, 8 PM onwards.
-</marquee>
-  
-  <div class="container">
-    <div class="row mb-5 about-quick-facts">
-
-      <!-- About Section -->
-      <div id="about" class="col-lg-6">
-        <h2>About Our Melukote Homestay</h2>
-        <p>
-          Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
-          Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
-          spiritual environment for families visiting for darshan or the
-          <strong>Sri Vairamudi Utsava</strong>.
-        </p>
-        <p>
-          Unlike expensive hotels, our <strong>homestay contribution is just ₹999/day</strong>,
-          providing a clean home-like stay for devotees.
-        </p>
-
-        <p class="address">
-          <i class="fa fa-map-marker text-primary"></i>
-          <a href="https://maps.google.com/?q=Shree+Niwasa+Homestay+Melukote"
-             target="_blank" rel="noopener">
-            <strong>Location:</strong>
-            #379, Megalakere, Near Sabhapathi Mantapa, Melukote, KA 571431
+          <a href="bookings.php" class="btn btn-primary btn-pulse fw-bold px-4">
+            Check Availability
           </a>
-        </p>
+        </div>
       </div>
 
-      <!-- Stay Details + Availability -->
-      <div class="col-lg-6 quick-facts">
-        <h3>Stay Details</h3>
-        <ul class="list-unstyled mb-2">
-          <li><i class="fa fa-home text-success me-2"></i> <strong>Type:</strong> 2BHK House</li>
-          <li><i class="fa fa-users text-success me-2"></i> <strong>Capacity:</strong> Max 8 guests</li>
-          <li><i class="fa fa-clock-o text-success me-2"></i>
-            <strong>Check-in:</strong> 12:00 PM |
-            <strong>Check-out:</strong> 10:00 AM
-          </li>
-          <li>
-            <i class="fa fa-whatsapp text-success me-2"></i>
-            <strong>Booking:</strong>
-            <a href="tel:+919008288474">+91 90082 88474</a>
-          </li>
+
+      <!-- SLIDE 2 -->
+      <div class="carousel-item">
+        <img src="img/lord-cheluvanarayana-swamy-melukote-in-vairumudi.png" class="d-block w-100 carousel-img"
+          alt="Comfortable rooms at Shree Niwasa Homestay in Melukote" loading="lazy">
+
+        <div class="carousel-caption">
+          <h1>Join the Vairamudi Utsava (27 Mar -5 Apr 2026)</h1>
+          <p>Receive the blessings of Lord Cheluvanarayana Swamy.</p>
+
+          <a href="https://www.youtube.com/live/6v5icJOGZv0?si=m0cZfeESCH56-AEt"
+            class="btn btn-primary btn-pulse fw-bold px-4">
+            Watch Previous Utsava (2025)
+          </a> &nbsp;&nbsp;
+          <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php" class="btn btn-outline-light fw-bold px-4 ">
+            Know More
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <!-- Hero Banner & About Homestay Start -->
+  <main class="mt-5">
+    <!-- Marquee for special occasions -->
+    <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
+      🚩 Sri Vairamudi Brahmotsava 2026 | Grand Kiritadharana Mahotsava: Saturday, March 28th, 8 PM onwards.
+    </marquee>
+
+    <div class="container">
+      <div class="row mb-5 about-quick-facts">
+
+        <!-- About Section -->
+        <div id="about" class="col-lg-6">
+          <h2>About Our Melukote Homestay</h2>
+          <p>
+            Welcome to Shree Niwasa, the preferred <strong>2BHK pilgrim accommodation in Melukote</strong>.
+            Located just minutes from the <strong>Cheluvanarayana Swamy Temple</strong>, we offer a peaceful
+            spiritual environment for families visiting for darshan or the
+            <strong>Sri Vairamudi Utsava</strong>.
+          </p>
+          <p>
+            Unlike expensive hotels, our <strong>homestay contribution is just ₹999/day</strong>,
+            providing a clean home-like stay for devotees.
+          </p>
+
+          <p class="address">
+            <i class="fa fa-map-marker text-primary"></i>
+            <a href="https://maps.google.com/?q=Shree+Niwasa+Homestay+Melukote" target="_blank" rel="noopener">
+              <strong>Location:</strong>
+              #379, Megalakere, Near Sabhapathi Mantapa, Melukote, KA 571431
+            </a>
+          </p>
+        </div>
+
+        <!-- Stay Details + Availability -->
+        <div class="col-lg-6 quick-facts">
+          <h3>Stay Details</h3>
+          <ul class="list-unstyled mb-2">
+            <li><i class="fa fa-home text-success me-2"></i> <strong>Type:</strong> 2BHK House</li>
+            <li><i class="fa fa-users text-success me-2"></i> <strong>Capacity:</strong> Max 8 guests</li>
+            <li><i class="fa fa-clock-o text-success me-2"></i>
+              <strong>Check-in:</strong> 12:00 PM |
+              <strong>Check-out:</strong> 10:00 AM
+            </li>
+            <li>
+              <i class="fa fa-whatsapp text-success me-2"></i>
+              <strong>Booking:</strong>
+              <a href="tel:+919008288474">+91 90082 88474</a>
+            </li>
+          </ul>
+
+          <!-- Compact Availability Calendar -->
+          <section class="availability-calendar mt-3 border-top pt-2">
+            <h3 style="font-size:0.95rem; font-weight:600;">Availability Calendar</h3>
+
+            <!-- Legend -->
+            <div style="font-size:0.75rem; margin-bottom:6px;">
+              <span class="legend available"></span> Available
+              <span class="legend booked"></span> Booked
+            </div>
+
+            <!-- Calendar Grid -->
+            <div id="calendarGrid" class="calendar-grid"></div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Hero Banner & About Homestay End -->
+
+
+
+
+  <div class="modal fade" id="vairumudiModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sri Vairamudi Brahmotsava 2026 Schedule</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="invitationCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation.jpeg" class="d-block w-100" alt="Cover Page">
+              </div>
+              <div class="carousel-item">
+                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 1.jpeg" class="d-block w-100"
+                  alt="Schedule Part 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 2.jpeg" class="d-block w-100"
+                  alt="Schedule Part 2">
+              </div>
+              <div class="carousel-item">
+                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 3.jpeg" class="d-block w-100"
+                  alt="Schedule Part 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#invitationCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"
+                style="background-color: rgba(0,0,0,0.5);"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#invitationCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"
+                style="background-color: rgba(0,0,0,0.5);"></span>
+            </button>
+          </div>
+          <p class="mt-3 small text-muted text-center">Tip: Swipe or click arrows to see the full schedule.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Check if the modal has already been shown in this session
+      const hasSeenModal = sessionStorage.getItem('vairumudiShown');
+      const modalElement = document.getElementById('vairumudiModal');
+
+      if (!hasSeenModal && modalElement) {
+        // 2. Initialize the modal properly using Bootstrap's constructor
+        const vairumudiModal = new bootstrap.Modal(modalElement, {
+          keyboard: true,
+          backdrop: true // Ensures it behaves like a standard popup
+        });
+
+        // 3. Show after a short delay for better UX
+        setTimeout(function () {
+          vairumudiModal.show();
+          // 4. Set the flag so it doesn't show again until the browser is closed
+          sessionStorage.setItem('vairumudiShown', 'true');
+        }, 1500);
+      }
+    });
+  </script>
+
+
+  <script>
+
+
+    (function () {
+
+      const grid = document.getElementById('calendarGrid');
+      if (!grid) return;
+
+      let viewDate = new Date(); // current visible month
+
+      // Month navigation container
+      const nav = document.createElement('div');
+      nav.style.fontSize = '0.75rem';
+      nav.style.marginBottom = '6px';
+      nav.style.display = 'flex';
+      nav.style.justifyContent = 'space-between';
+      nav.style.alignItems = 'center';
+
+      const prev = document.createElement('span');
+      prev.textContent = '< Prev ';
+      prev.style.cursor = 'pointer';
+
+      const monthName = document.createElement('span');
+      monthName.style.fontWeight = '600';
+
+      const next = document.createElement('span');
+      next.textContent = 'Next >';
+      next.style.cursor = 'pointer';
+
+      nav.appendChild(prev);
+      nav.appendChild(monthName);
+      nav.appendChild(next);
+
+      grid.parentNode.insertBefore(nav, grid);
+
+      function renderCalendar() {
+        grid.innerHTML = '';
+
+        const year = viewDate.getFullYear();
+        const month = viewDate.getMonth(); // 0-based
+
+        monthName.textContent = viewDate.toLocaleString('default', {
+          month: 'long',
+          year: 'numeric'
+        });
+
+        fetch(`fetch_bookings.php?year=${year}&month=${month + 1}`)
+          .then(res => res.json())
+          .then(booked => drawCalendar(year, month, booked))
+          .catch(err => console.error('Fetch error:', err));
+      }
+
+      function drawCalendar(year, month, booked) {
+
+        const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        // Day headers
+        days.forEach(d => {
+          const el = document.createElement('div');
+          el.textContent = d;
+          el.style.fontWeight = '600';
+          grid.appendChild(el);
+        });
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const totalDays = new Date(year, month + 1, 0).getDate();
+
+        // Empty slots
+        for (let i = 0; i < firstDay; i++) {
+          grid.appendChild(document.createElement('div'));
+        }
+
+        for (let d = 1; d <= totalDays; d++) {
+
+          const cellDate = new Date(year, month, d);
+          cellDate.setHours(0, 0, 0, 0);
+
+          const mm = String(month + 1).padStart(2, '0');
+          const dd = String(d).padStart(2, '0');
+          const key = `${year}-${mm}-${dd}`;
+
+          const cell = document.createElement('div');
+          cell.textContent = d;
+          cell.style.padding = '4px 0';
+          cell.style.borderRadius = '4px';
+          cell.style.fontWeight = '600';
+
+          // X Past dates
+          if (cellDate < today) {
+            cell.textContent = 'X';
+            cell.style.background = '#f1f1f1';
+            cell.style.color = '#999';
+            cell.title = 'Past date';
+          }
+
+          //  Booked
+          else if (booked.includes(key)) {
+            cell.style.background = '#f8d7da';
+            cell.style.color = '#842029';
+            // cell.title = 'Booked';
+          }
+
+          //  Available
+          else {
+            cell.style.background = '#e6f4ea';
+            cell.style.color = '#1e7e34';
+            cell.style.cursor = 'pointer';
+            // cell.title = 'Available – click to book';
+
+            cell.onclick = () => {
+              scrollToBooking(key);
+            };
+          }
+
+          grid.appendChild(cell);
+        }
+      }
+
+      // Scroll + prefill booking form
+      function scrollToBooking(dateStr) {
+        const section = document.getElementById('availability');
+        const checkIn = document.getElementById('checkInPicker');
+
+        if (!section || !checkIn) return;
+
+        section.scrollIntoView({ behavior: 'smooth' });
+
+        setTimeout(() => {
+          checkIn.value = dateStr;
+          document.getElementById('check_in').value = dateStr;
+
+          // If Flatpickr instance exists, set date properly
+          if (checkIn._flatpickr) {
+            checkIn._flatpickr.setDate(dateStr, true);
+            checkIn._flatpickr.open();
+          }
+        }, 600);
+      }
+
+      // Navigation actions
+      prev.onclick = () => {
+        viewDate.setMonth(viewDate.getMonth() - 1);
+        renderCalendar();
+      };
+
+      next.onclick = () => {
+        viewDate.setMonth(viewDate.getMonth() + 1);
+        renderCalendar();
+      };
+
+      renderCalendar();
+
+    })();
+  </script>
+
+
+  <!-- Hero Banner,Calendar & About Homestay End -->
+
+
+  <!-- Facilities Start -->
+  <section id="amenities" class="mb-5">
+    <h2 class="text-center mb-4">Facilities & Amenities</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-bed fa-2x text-primary mb-3"></i>
+          <h5>Clean Rooms</h5>
+          <p class="small text-muted">Fresh bedding and sanitized rooms for a restful night.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-cutlery fa-2x text-primary mb-3"></i>
+          <h5>Kitchen Access</h5>
+          <p class="small text-muted">Equipped kitchen for pilgrims to prepare milk or light meals.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-shower fa-2x text-primary mb-3"></i>
+          <h5>Hot Water & Hygiene</h5>
+          <p class="small text-muted">Sanitized bathrooms with modern western facilities and hot water.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local-services" class="mb-5 local-services bg-light p-4 rounded">
+    <h2 class="text-center mb-3">Food & Local Travel Guide</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="img/homestay-melukote-andnda-mess.png" alt="Authentic Iyengar Puliyogare at Ananda Mess Melukote"
+          class="service-image img-fluid rounded shadow">
+        <p class="hotel-name mt-2 mb-0 fw-bold">Ananda Mess Partner</p>
+      </div>
+      <div class="col-md-8">
+        <p>We ensure your pilgrimage is hassle-free by connecting you with trusted Melukote services:</p>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check text-success me-2"></i><strong>Traditional Food:</strong> Authentic Iyengar
+            Puliyogare & Meals delivery.</li>
+          <li><i class="fa fa-check text-success me-2"></i><strong>Darshan Guide:</strong> Assistance for visiting
+            Yoga Narasimha Temple.</li>
+          <li><i class="fa fa-check text-success me-2"></i><strong>Local Transport:</strong> Reliable auto-rickshaw
+            contacts for sightseeing.</li>
         </ul>
-
-        <!-- Compact Availability Calendar -->
-        <section class="availability-calendar mt-3 border-top pt-2">
-          <h3 style="font-size:0.95rem; font-weight:600;">Availability Calendar</h3>
-
-          <!-- Legend -->
-          <div style="font-size:0.75rem; margin-bottom:6px;">
-            <span class="legend available"></span> Available
-            <span class="legend booked"></span> Booked
-          </div>
-
-          <!-- Calendar Grid -->
-          <div id="calendarGrid" class="calendar-grid"></div>
-        </section>
-
       </div>
     </div>
+  </section>
+  <!-- Facilities End -->
+
+  <!-- Blogs & Latest Updates Start -->
+  <section id="blogs" class="mb-5">
+    <h2 class="text-center mb-4">Blogs & Latest Updates</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa- fa-2x text-primary mb-3"></i>
+          <h5>Sri Vairamudi Utsava 2026 </h5>
+          <p class="small text-muted">Annual ritual in Melukote for Lord Cheluvanarayana Swamy Melukote.</p>
+          <a href="blogs-melukote/sri-vairamudi-utsava-melukote-2026.php " class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-clock-o fa-2x text-primary mb-3"></i>
+          <h5>Timings in Melukote Temple</h5>
+          <p class="small text-muted">Timings of Cheluva Narayana Darshan, Yoga Narasimha Darshan, and Pooja.</p>
+          <a href="blogs-melukote/schedule-in-melukote-temple.php" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-book fa-2x text-primary mb-3"></i>
+          <h5>Melukote's History</h5>
+          <p class="small text-muted">Explore the rich history and cultural significance of Melukote.</p>
+          <a href="blogs-melukote/history-of-melukote.php " class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div> <br>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-road fa-2x text-primary mb-3"></i>
+          <h5>1 Day Trip Plan for Melukote</h5>
+          <p class="small text-muted">A one-day trip plan for Melukote, a popular tourist destination in Karnataka.
+          </p>
+          <a href="blogs-melukote/1-day-trip-plan-for-melukote.php" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="facility-card p-4 shadow-sm border rounded">
+          <i class="fa fa-calendar fa-2x text-primary mb-3"></i>
+          <h5>Melukote Calendar Of Events</h5>
+          <p class="small text-muted">A calendar of upcoming events in Melukote, including festivals and
+            cultural activities.
+          </p>
+          <a href="blogs-melukote/melukote-temple-annual-events.php" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!-- Blogs & Latest Updates End -->
+
+  <!-- Testimonials Start -->
+  <section id="feedback" class="mb-5">
+    <h2 class="text-center mb-4">Pilgrim Testimonials</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="mb-3 text-warning">★★★★★</div>
+            <p class="card-text italic">"Cleanest 2BHK in Melukote. The host was very helpful with temple timings."
+            </p>
+            <h6 class="fw-bold">- Ravi K.</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="mb-3 text-warning">★★★★★</div>
+            <p class="card-text">"Perfect for families. Having a kitchen was a blessing for our elderly parents."
+            </p>
+            <h6 class="fw-bold">- Meera S.</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="mb-3 text-warning">★★★★★</div>
+            <p class="card-text">"Very close to Cheluvanarayana Swamy temple. Highly recommended."</p>
+            <h6 class="fw-bold">- Anil P.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   </div>
-</main>
-<!-- Hero Banner & About Homestay End -->
-
-
-
-
-<div class="modal fade" id="vairumudiModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Sri Vairamudi Brahmotsava 2026 Schedule</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="invitationCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation.jpeg" class="d-block w-100" alt="Cover Page">
-            </div>
-            <div class="carousel-item">
-              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 1.jpeg" class="d-block w-100" alt="Schedule Part 1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 2.jpeg" class="d-block w-100" alt="Schedule Part 2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 3.jpeg" class="d-block w-100" alt="Schedule Part 3">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#invitationCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#invitationCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
-          </button>
-        </div>
-        <p class="mt-3 small text-muted text-center">Tip: Swipe or click arrows to see the full schedule.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // 1. Check if the modal has already been shown in this session
-    const hasSeenModal = sessionStorage.getItem('vairumudiShown');
-    const modalElement = document.getElementById('vairumudiModal');
-
-    if (!hasSeenModal && modalElement) {
-      // 2. Initialize the modal properly using Bootstrap's constructor
-      const vairumudiModal = new bootstrap.Modal(modalElement, {
-        keyboard: true,
-        backdrop: true // Ensures it behaves like a standard popup
-      });
-
-      // 3. Show after a short delay for better UX
-      setTimeout(function() {
-        vairumudiModal.show();
-        // 4. Set the flag so it doesn't show again until the browser is closed
-        sessionStorage.setItem('vairumudiShown', 'true');
-      }, 1500);
-    }
-  });
-</script>
-
-
-<script>
-(function () {
-
-  const grid = document.getElementById('calendarGrid');
-  if (!grid) return;
-
-  let viewDate = new Date(); // current visible month
-
-  // Month navigation container
-  const nav = document.createElement('div');
-  nav.style.fontSize = '0.75rem';
-  nav.style.marginBottom = '6px';
-  nav.style.display = 'flex';
-  nav.style.justifyContent = 'space-between';
-  nav.style.alignItems = 'center';
-
-  const prev = document.createElement('span');
-  prev.textContent = '< Prev ';
-  prev.style.cursor = 'pointer';
-
-  const monthName = document.createElement('span');
-  monthName.style.fontWeight = '600';
-
-  const next = document.createElement('span');
-  next.textContent = 'Next >';
-  next.style.cursor = 'pointer';
-
-  nav.appendChild(prev);
-  nav.appendChild(monthName);
-  nav.appendChild(next);
-
-  grid.parentNode.insertBefore(nav, grid);
-
-  function renderCalendar() {
-    grid.innerHTML = '';
-
-    const year  = viewDate.getFullYear();
-    const month = viewDate.getMonth(); // 0-based
-
-    monthName.textContent = viewDate.toLocaleString('default', {
-      month: 'long',
-      year: 'numeric'
-    });
-
-    fetch(`fetch_bookings.php?year=${year}&month=${month + 1}`)
-      .then(res => res.json())
-      .then(booked => drawCalendar(year, month, booked))
-      .catch(err => console.error('Fetch error:', err));
-  }
-
-  function drawCalendar(year, month, booked) {
-
-    const days = ['S','M','T','W','T','F','S'];
-    const today = new Date();
-    today.setHours(0,0,0,0);
-
-    // Day headers
-    days.forEach(d => {
-      const el = document.createElement('div');
-      el.textContent = d;
-      el.style.fontWeight = '600';
-      grid.appendChild(el);
-    });
-
-    const firstDay  = new Date(year, month, 1).getDay();
-    const totalDays = new Date(year, month + 1, 0).getDate();
-
-    // Empty slots
-    for (let i = 0; i < firstDay; i++) {
-      grid.appendChild(document.createElement('div'));
-    }
-
-    for (let d = 1; d <= totalDays; d++) {
-
-      const cellDate = new Date(year, month, d);
-      cellDate.setHours(0,0,0,0);
-
-      const mm = String(month + 1).padStart(2, '0');
-      const dd = String(d).padStart(2, '0');
-      const key = `${year}-${mm}-${dd}`;
-
-      const cell = document.createElement('div');
-      cell.textContent = d;
-      cell.style.padding = '4px 0';
-      cell.style.borderRadius = '4px';
-      cell.style.fontWeight = '600';
-
-      // X Past dates
-      if (cellDate < today) {
-        cell.textContent = 'X';
-        cell.style.background = '#f1f1f1';
-        cell.style.color = '#999';
-        cell.title = 'Past date';
-      }
-
-      //  Booked
-      else if (booked.includes(key)) {
-        cell.style.background = '#f8d7da';
-        cell.style.color = '#842029';
-        // cell.title = 'Booked';
-      }
-
-      //  Available
-      else {
-        cell.style.background = '#e6f4ea';
-        cell.style.color = '#1e7e34';
-        cell.style.cursor = 'pointer';
-        // cell.title = 'Available – click to book';
-
-        cell.onclick = () => {
-          scrollToBooking(key);
-        };
-      }
-
-      grid.appendChild(cell);
-    }
-  }
-
-  // Scroll + prefill booking form
-  function scrollToBooking(dateStr) {
-    const section = document.getElementById('availability');
-    const checkIn = document.getElementById('checkInPicker');
-
-    if (!section || !checkIn) return;
-
-    section.scrollIntoView({ behavior: 'smooth' });
-
-    setTimeout(() => {
-      checkIn.value = dateStr;
-      document.getElementById('check_in').value = dateStr;
-
-      // If Flatpickr instance exists, set date properly
-      if (checkIn._flatpickr) {
-        checkIn._flatpickr.setDate(dateStr, true);
-        checkIn._flatpickr.open();
-      }
-    }, 600);
-  }
-
-  // Navigation actions
-  prev.onclick = () => {
-    viewDate.setMonth(viewDate.getMonth() - 1);
-    renderCalendar();
-  };
-
-  next.onclick = () => {
-    viewDate.setMonth(viewDate.getMonth() + 1);
-    renderCalendar();
-  };
-
-  renderCalendar();
-
-})();
-</script>
-
-
-     <!-- Hero Banner,Calendar & About Homestay End -->
-
-
-      <!-- Facilities Start -->
-      <section id="amenities" class="mb-5">
-        <h2 class="text-center mb-4">Facilities & Amenities</h2>
-        <div class="row g-4 text-center">
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-bed fa-2x text-primary mb-3"></i>
-              <h5>Clean Rooms</h5>
-              <p class="small text-muted">Fresh bedding and sanitized rooms for a restful night.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-cutlery fa-2x text-primary mb-3"></i>
-              <h5>Kitchen Access</h5>
-              <p class="small text-muted">Equipped kitchen for pilgrims to prepare milk or light meals.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-shower fa-2x text-primary mb-3"></i>
-              <h5>Hot Water & Hygiene</h5>
-              <p class="small text-muted">Sanitized bathrooms with modern western facilities and hot water.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="local-services" class="mb-5 local-services bg-light p-4 rounded">
-        <h2 class="text-center mb-3">Food & Local Travel Guide</h2>
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center">
-            <img src="img/homestay-melukote-andnda-mess.png" alt="Authentic Iyengar Puliyogare at Ananda Mess Melukote"
-              class="service-image img-fluid rounded shadow">
-            <p class="hotel-name mt-2 mb-0 fw-bold">Ananda Mess Partner</p>
-          </div>
-          <div class="col-md-8">
-            <p>We ensure your pilgrimage is hassle-free by connecting you with trusted Melukote services:</p>
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check text-success me-2"></i><strong>Traditional Food:</strong> Authentic Iyengar
-                Puliyogare & Meals delivery.</li>
-              <li><i class="fa fa-check text-success me-2"></i><strong>Darshan Guide:</strong> Assistance for visiting
-                Yoga Narasimha Temple.</li>
-              <li><i class="fa fa-check text-success me-2"></i><strong>Local Transport:</strong> Reliable auto-rickshaw
-                contacts for sightseeing.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Facilities End -->
-
-      <!-- Blogs & Latest Updates Start -->
-      <section id="blogs" class="mb-5">
-        <h2 class="text-center mb-4">Blogs & Latest Updates</h2>
-        <div class="row g-4 text-center">
-              <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa- fa-2x text-primary mb-3"></i>
-              <h5>Sri Vairamudi Utsava 2026 </h5>
-              <p class="small text-muted">Annual ritual in Melukote for Lord Cheluvanarayana Swamy Melukote.</p>
-              <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php " class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-clock-o fa-2x text-primary mb-3"></i>
-              <h5>Timings in Melukote Temple</h5>
-              <p class="small text-muted">Timings of Cheluva Narayana Darshan, Yoga Narasimha Darshan, and Pooja.</p>
-              <a href="blogs-melukote/schedule-in-melukote-temple.php" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-book fa-2x text-primary mb-3"></i>
-              <h5>Melukote's History</h5>
-              <p class="small text-muted">Explore the rich history and cultural significance of Melukote.</p>
-              <a href="blogs-melukote/history-of-melukote.php " class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div> <br>
-        
-        <div class="row g-4 text-center">
-        <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-road fa-2x text-primary mb-3"></i>
-              <h5>1 Day Trip Plan for Melukote</h5>
-              <p class="small text-muted">A one-day trip plan for Melukote, a popular tourist destination in Karnataka.
-              </p>
-              <a href="blogs-melukote/1-day-trip-plan-for-melukote.php" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="facility-card p-4 shadow-sm border rounded">
-              <i class="fa fa-calendar fa-2x text-primary mb-3"></i>
-              <h5>Melukote Calendar Of Events</h5>
-              <p class="small text-muted">A calendar of upcoming events in Melukote, including festivals and
-                cultural activities.
-              </p>
-              <a href="blogs-melukote/melukote-temple-annual-events.php" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-
-        </div>
-        </div>
-      </section>
-      <!-- Blogs & Latest Updates End -->
-
-      <!-- Testimonials Start -->
-      <section id="feedback" class="mb-5">
-        <h2 class="text-center mb-4">Pilgrim Testimonials</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-              <div class="card-body text-center">
-                <div class="mb-3 text-warning">★★★★★</div>
-                <p class="card-text italic">"Cleanest 2BHK in Melukote. The host was very helpful with temple timings."
-                </p>
-                <h6 class="fw-bold">- Ravi K.</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-              <div class="card-body text-center">
-                <div class="mb-3 text-warning">★★★★★</div>
-                <p class="card-text">"Perfect for families. Having a kitchen was a blessing for our elderly parents."
-                </p>
-                <h6 class="fw-bold">- Meera S.</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0">
-              <div class="card-body text-center">
-                <div class="mb-3 text-warning">★★★★★</div>
-                <p class="card-text">"Very close to Cheluvanarayana Swamy temple. Highly recommended."</p>
-                <h6 class="fw-bold">- Anil P.</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
   </main>
   <!-- Testimonials End -->
 

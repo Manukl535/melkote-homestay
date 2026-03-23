@@ -256,7 +256,7 @@
     <h2>Best Time to Visit</h2>
     <p>
       The Sri Vairamudi Utsava is held every year around late March to early April. In 2026, the festival dates are from 
-      <strong>27th March to 5th April</strong>. Early arrival ensures a peaceful visit and better access to rituals.
+      <strong>23rd March to 04th April</strong>. Early arrival ensures a peaceful visit and better access to rituals.
     </p>
 
     <h2>Experience and Spiritual Significance</h2>
