@@ -196,9 +196,9 @@
 <!-- Hero Banner & About Homestay Start -->
 <main class="mt-5">
   <!-- Marquee for special occasions -->
-   <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
-    Be a part of the Sri Vairamudi Utsava from 27th March 2026 to 5th April 2026 and take blessings from Lord Cheluvanarayana Swamy. 
-     </marquee>
+<marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
+  Be a part of the Sri Vairamudi Brahmotsava from 23rd March 2026 to 4th April 2026. The grand Vairamudi Kiritadharana Mahotsava is on 28th March (8 PM onwards). Seek blessings from Lord Cheluvanarayana Swamy!
+</marquee>
   
   <div class="container">
     <div class="row mb-5 about-quick-facts">
@@ -264,7 +264,73 @@
 </main>
 <!-- Hero Banner & About Homestay End -->
 
+
+
+
+<div class="modal fade" id="vairumudiModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sri Vairamudi Brahmotsava 2026 Schedule</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="invitationCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation.jpeg" class="d-block w-100" alt="Cover Page">
+            </div>
+            <div class="carousel-item">
+              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 1.jpeg" class="d-block w-100" alt="Schedule Part 1">
+            </div>
+            <div class="carousel-item">
+              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 2.jpeg" class="d-block w-100" alt="Schedule Part 2">
+            </div>
+            <div class="carousel-item">
+              <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 3.jpeg" class="d-block w-100" alt="Schedule Part 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#invitationCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#invitationCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
+          </button>
+        </div>
+        <p class="mt-3 small text-muted text-center">Tip: Swipe or click arrows to see the full schedule.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Check if the user has already seen this in the current session
+    if (!sessionStorage.getItem('vairumudiShown')) {
+      
+      // 2. Add a slight delay (2000ms = 2 seconds) so the page feels natural
+      setTimeout(function() {
+        var myModal = new bootstrap.Modal(document.getElementById('vairumudiModal'));
+        myModal.show();
+        
+        // 3. Mark as shown so it doesn't repeat on every refresh
+        sessionStorage.setItem('vairumudiShown', 'true');
+      }, 2000); 
+    }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize the Bootstrap modal
+    var invitationModal = new bootstrap.Modal(document.getElementById('vairumudiModal'));
+    
+    // Show the modal automatically
+    invitationModal.show();
+  });
+</script>
+
+<script>
+
+
 (function () {
 
   const grid = document.getElementById('calendarGrid');
