@@ -197,7 +197,7 @@
 <main class="mt-5">
   <!-- Marquee for special occasions -->
 <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
-  Be a part of the Sri Vairamudi Brahmotsava from 23rd March 2026 to 4th April 2026. The grand Vairamudi Kiritadharana Mahotsava is on 28th March (8 PM onwards). Seek blessings from Lord Cheluvanarayana Swamy!
+  🚩 Sri Vairamudi Brahmotsava 2026 | Grand Kiritadharana Mahotsava: Saturday, March 28th, 8 PM onwards.
 </marquee>
   
   <div class="container">
