@@ -124,9 +124,9 @@
 
     <!-- Indicators (dots) -->
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <!-- <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button> -->
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
     </div>
 
     <div class="carousel-inner">
@@ -147,29 +147,12 @@
       </div>
 
 
-      <!-- SLIDE 2 -->
-      <div class="carousel-item">
-        <img src="img/lord-cheluvanarayana-swamy-melukote-in-vairumudi.png" class="d-block w-100 carousel-img"
-          alt="Comfortable rooms at Shree Niwasa Homestay in Melukote" loading="lazy">
 
-        <div class="carousel-caption">
-          <h1>Join the Vairamudi Utsava (27 Mar -5 Apr 2026)</h1>
-          <p>Receive the blessings of Lord Cheluvanarayana Swamy.</p>
-
-          <a href="https://www.youtube.com/live/6v5icJOGZv0?si=m0cZfeESCH56-AEt"
-            class="btn btn-primary btn-pulse fw-bold px-4">
-            Watch Previous Utsava (2025)
-          </a> &nbsp;&nbsp;
-          <a href="blogs-melukote/sri-vairamudi-utsava-melukote.php" class="btn btn-outline-light fw-bold px-4 ">
-            Know More
-          </a>
-        </div>
-      </div>
 
     </div>
 
     <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
@@ -177,16 +160,13 @@
     <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-    </button>
+    </button> -->
 
   </div>
 
   <!-- Hero Banner & About Homestay Start -->
   <main class="mt-5">
-    <!-- Marquee for special occasions -->
-    <marquee behavior="scroll" direction="left" class="mb-3 text-primary fw-bold">
-      🚩 Sri Vairamudi Brahmotsava 2026 | Grand Kiritadharana Mahotsava: Saturday, March 28th, 8 PM onwards.
-    </marquee>
+    
 
     <div class="container">
       <div class="row mb-5 about-quick-facts">
@@ -219,13 +199,13 @@
           <h3>Stay Details</h3>
           <ul class="list-unstyled mb-2">
             <li><i class="fa fa-home text-success me-2"></i> <strong>Type:</strong> 2BHK House</li>
-            <li><i class="fa fa-users text-success me-2"></i> <strong>Capacity:</strong> Max 8 guests</li>
+            <li><i class="fa fa-users text-success me-2"></i> <strong>Capacity:</strong> Max 6 guests</li>
             <li><i class="fa fa-clock-o text-success me-2"></i>
               <strong>Check-in:</strong> 12:00 PM |
               <strong>Check-out:</strong> 10:00 AM
             </li>
             <li>
-              <i class="fa fa-whatsapp text-success me-2"></i>
+              <i class="fa fa-phone text-success me-2"></i>
               <strong>Booking:</strong>
               <a href="tel:+919008288474">+91 90082 88474</a>
             </li>
@@ -254,70 +234,6 @@
 
 
 
-  <div class="modal fade" id="vairumudiModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Sri Vairamudi Brahmotsava 2026 Schedule</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div id="invitationCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation.jpeg" class="d-block w-100" alt="Cover Page">
-              </div>
-              <div class="carousel-item">
-                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 1.jpeg" class="d-block w-100"
-                  alt="Schedule Part 1">
-              </div>
-              <div class="carousel-item">
-                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 2.jpeg" class="d-block w-100"
-                  alt="Schedule Part 2">
-              </div>
-              <div class="carousel-item">
-                <img src="img/vairumudi-utsava-2026/Vairumudi_Invitation 3.jpeg" class="d-block w-100"
-                  alt="Schedule Part 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#invitationCarousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"
-                style="background-color: rgba(0,0,0,0.5);"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#invitationCarousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"
-                style="background-color: rgba(0,0,0,0.5);"></span>
-            </button>
-          </div>
-          <p class="mt-3 small text-muted text-center">Tip: Swipe or click arrows to see the full schedule.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // 1. Check if the modal has already been shown in this session
-      const hasSeenModal = sessionStorage.getItem('vairumudiShown');
-      const modalElement = document.getElementById('vairumudiModal');
-
-      if (!hasSeenModal && modalElement) {
-        // 2. Initialize the modal properly using Bootstrap's constructor
-        const vairumudiModal = new bootstrap.Modal(modalElement, {
-          keyboard: true,
-          backdrop: true // Ensures it behaves like a standard popup
-        });
-
-        // 3. Show after a short delay for better UX
-        setTimeout(function () {
-          vairumudiModal.show();
-          // 4. Set the flag so it doesn't show again until the browser is closed
-          sessionStorage.setItem('vairumudiShown', 'true');
-        }, 1500);
-      }
-    });
-  </script>
 
 
   <script>
