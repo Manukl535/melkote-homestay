@@ -266,138 +266,146 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       text-decoration: line-through;
     }
 
- /* Disclaimer Modal - Enhanced */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(4px);
-    transition: opacity 0.3s ease;
-  }
+    /* Disclaimer Modal - Enhanced */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      transition: opacity 0.3s ease;
+    }
 
-  .modal-content {
-    background: #fff;
-    margin: 5% auto;
-    padding: 30px 35px;
-    width: 90%;
-    max-width: 700px;
-    max-height: 85vh;
-    overflow-y: auto;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    position: relative;
-    animation: slideDown 0.4s ease forwards;
-  }
-
-  @keyframes slideDown {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-  }
-
-  .modal-content h2 {
-    margin-top: 0;
-    font-size: 26px;
-    color: #2c3e50;
-    text-align: center;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 12px;
-  }
-
-  .modal-content h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #27ae60;
-  }
-
-  .modal-content p {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 15px;
-  }
-
-  .close {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-
-  .close:hover {
-    color: #e74c3c;
-  }
-
-  .agree-btn {
-    display: block;
-    width: 150px;
-    margin: 25px auto 0 auto;
-    padding: 12px 20px;
-    background-color: #27ae60;
-    color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  }
-
-  .agree-btn:hover {
-    background-color: #219150;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-  }
-
-  .agree-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Scrollbar styling for modal content */
-  .modal-content::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  .modal-content::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 4px;
-  }
-
-  .modal-content::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  @media (max-width: 768px) {
     .modal-content {
-      padding: 25px 20px;
+      background: #fff;
+      margin: 5% auto;
+      padding: 30px 35px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      position: relative;
+      animation: slideDown 0.4s ease forwards;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .modal-content h2 {
-      font-size: 22px;
+      margin-top: 0;
+      font-size: 26px;
+      color: #2c3e50;
+      text-align: center;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 12px;
     }
 
     .modal-content h3 {
-      font-size: 16px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #27ae60;
+    }
+
+    .modal-content p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .close:hover {
+      color: #e74c3c;
     }
 
     .agree-btn {
-      width: 130px;
-      font-size: 15px;
-      padding: 10px 18px;
+      display: block;
+      width: 150px;
+      margin: 25px auto 0 auto;
+      padding: 12px 20px;
+      background-color: #27ae60;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
-  }  </style>
+
+    .agree-btn:hover {
+      background-color: #219150;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .agree-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Scrollbar styling for modal content */
+    .modal-content::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+
+    .modal-content::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .modal-content {
+        padding: 25px 20px;
+      }
+
+      .modal-content h2 {
+        font-size: 22px;
+      }
+
+      .modal-content h3 {
+        font-size: 16px;
+      }
+
+      .agree-btn {
+        width: 130px;
+        font-size: 15px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -411,7 +419,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       <p>
         The information on <strong>www.melukote.com</strong> is provided for general informational purposes only.
-        While we make every effort to ensure accuracy, <strong>Shree Niwasa - Melukote  Homestay</strong> and its
+        While we make every effort to ensure accuracy, <strong>Shree Niwasa - Melukote Homestay</strong> and its
         family
         cannot guarantee the completeness or suitability of the information, services, or content on this Website.
       </p>
@@ -419,7 +427,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <h3>Booking & Availability</h3>
       <p>
         Accommodation is subject to availability and may change without prior notice. During special cultural and
-        religious periods, such as <strong>Utsav (2 Jul 2026)</strong>, 
+        religious periods, such as <strong>Utsav (2 Jul 2026)</strong>,
         <strong>Rajamudi Utsav (3 Aug 2026)</strong>, and <strong>17-20 Nov 2026</strong>, our family may occupy the
         property,
         which could limit availability. We kindly advise guests to confirm bookings in advance.
@@ -436,7 +444,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       <h3>Limitation of Liability</h3>
       <p>
-        <strong>Shree Niwasa - Melukote  Homestay</strong> shall not be liable for any loss or damage, including
+        <strong>Shree Niwasa - Melukote Homestay</strong> shall not be liable for any loss or damage, including
         indirect
         or consequential loss, arising from the use of this Website or bookings made through it.
       </p>
@@ -472,8 +480,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p class="text-center text-muted mb-4">
               <span class="badge bg-primary fs-6">Contribution: ₹999/day</span>
             </p>
-            <p class="text-center text-muted mb-4">Need Instructions for booking? 
-              <a href="shree-niwasa-homestay-in-melukote-booking-instructions.php">Click here</a></p>
+            <p class="text-center text-muted mb-4">Need Instructions for booking?
+              <a href="shree-niwasa-homestay-in-melukote-booking-instructions.php">Click here</a>
+            </p>
             <?php if (isset($success_message)): ?>
               <div class="alert alert-success text-center"><?php echo $success_message; ?></div>
             <?php elseif (isset($error_message)): ?>
@@ -499,14 +508,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
                     <label for="name">Full Name</label>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" maxlength="10"
+                      pattern="[0-9]{10}" required>
                     <label for="phone">Phone Number</label>
                   </div>
                 </div>
@@ -545,7 +555,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="col-12 text-center mt-3">
                   <p class="small text-muted mb-0">
                     By clicking "Confirm Booking", you agree to our
-                    <a href="terms-and-conditions.php" target="_blank" class="text-decoration-underline">Terms & 
+                    <a href="terms-and-conditions.php" target="_blank" class="text-decoration-underline">Terms &
                       Rules</a>.
                   </p>
                 </div>
@@ -700,6 +710,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       el.classList.add(isValid ? 'is-valid' : 'is-invalid');
     }
 
+    phoneInput.addEventListener('input', () => {
+      onlyDigits(phoneInput);
+
+      // Limit to 10 digits hard
+      phoneInput.value = phoneInput.value.slice(0, 10);
+
+      setValidity(phoneInput, phoneInput.value.length === 10);
+    });
+
+    const adultsInput = document.getElementById('adults');
+
+    adultsInput.addEventListener('input', () => {
+      let val = parseInt(adultsInput.value) || 1;
+
+      if (val < 1) val = 1;
+      if (val > 4) val = 4;
+
+      adultsInput.value = val;
+      setValidity(adultsInput, true);
+    });
+
+    const childrenInput = document.getElementById('children');
+
+    childrenInput.addEventListener('input', () => {
+      let val = parseInt(childrenInput.value) || 0;
+
+      if (val < 0) val = 0;
+      if (val > 2) val = 2;
+
+      childrenInput.value = val;
+      setValidity(childrenInput, true);
+    });
+
+    nameInput.addEventListener('keypress', (e) => {
+      const char = String.fromCharCode(e.which);
+
+      // Allow letters, space, dot, hyphen
+      if (!/[A-Za-z\s.-]/.test(char)) {
+        e.preventDefault();
+      }
+    });
     // -----------------------------
     // LIVE VALIDATION
     // -----------------------------
