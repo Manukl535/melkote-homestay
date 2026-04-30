@@ -419,8 +419,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <h3>Booking & Availability</h3>
       <p>
         Accommodation is subject to availability and may change without prior notice. During special cultural and
-        religious periods,
-        including <strong>Sri Vairamudi Brahmotsava (27 Mar-6 Apr 2026)</strong>, <strong>2 Jul 2026</strong>,
+        religious periods, such as <strong>Utsav (2 Jul 2026)</strong>, 
         <strong>Rajamudi Utsav (3 Aug 2026)</strong>, and <strong>17-20 Nov 2026</strong>, our family may occupy the
         property,
         which could limit availability. We kindly advise guests to confirm bookings in advance.
@@ -537,9 +536,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 <div class="col-md-4">
                   <div class="form-floating">
-                    <input type="number" class="form-control" id="children" name="children" min="0" max="4" value="0"
+                    <input type="number" class="form-control" id="children" name="children" min="0" max="2" value="0"
                       required>
-                    <label for="children">Children (Max 4)</label>
+                    <label for="children">Children (Max 2)</label>
                   </div>
                 </div>
 
