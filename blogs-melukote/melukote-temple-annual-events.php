@@ -138,7 +138,7 @@ footer {
     "url": "https://melukote.com/",
     "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
     "telephone": "+919008288474",
-    "priceRange": "₹999-₹1500",
+    "priceRange": "₹499 - ₹4999",
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI",
     "address": {
