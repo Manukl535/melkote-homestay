@@ -18,7 +18,7 @@ include 'inc/connection.php';
 // -------------------------------
 // Visitor Counter (IP Based, Single Table)
 // -------------------------------
-$visitorCount = 1000; // fallback
+// $visitorCount = 1000;
 
 if ($conn) {
 
@@ -78,10 +78,10 @@ if ($conn) {
 }
 ?>
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
+  document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 10){
+      if (window.scrollY > 10) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
@@ -96,7 +96,8 @@ if ($conn) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm d-none d-lg-flex">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.php">
-      <img src="img/thrinama.png" width="30" height="30" class="d-inline-block align-top" alt="Shree Niwasa" style="padding-top:2px;">
+      <img src="img/thrinama.png" width="30" height="30" class="d-inline-block align-top" alt="Shree Niwasa"
+        style="padding-top:2px;">
       Shree Niwasa
     </a>
 
@@ -105,15 +106,18 @@ if ($conn) {
         <li class="nav-item"><a class="nav-link <?= isActivePage('index.php'); ?>" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="index.php#amenities">Facilities</a></li>
         <li class="nav-item"><a class="nav-link" href="index.php#feedback">Reviews</a></li>
-        <li class="nav-item"><a class="nav-link <?= isActivePage('shree-niwasa-homestay-gallery.php'); ?>" href="shree-niwasa-homestay-gallery.php">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link <?= isActivePage('shree-niwasa-homestay-gallery.php'); ?>"
+            href="shree-niwasa-homestay-gallery.php">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="index.php#blogs">Blogs</a></li>
       </ul>
 
       <div class="d-flex align-items-center">
         <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹4999/- Per Day</strong></span>
-        <a href="bookings.php" class="btn btn-primary me-2 <?= isActivePage('bookings.php'); ?>"><i class="fa fa-calendar"></i> Book Now</a>
-        <a href="https://wa.me/919008288474" class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+        <a href="bookings.php" class="btn btn-primary me-2 <?= isActivePage('bookings.php'); ?>"><i
+            class="fa fa-calendar"></i> Book Now</a>
+        <a href="https://wa.me/919008288474" class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i>
+          WhatsApp</a>
       </div>
     </div>
   </div>

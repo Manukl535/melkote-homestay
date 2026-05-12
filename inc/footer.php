@@ -20,7 +20,7 @@ function mobileActive($page)
           the temple town, providing clean and affordable accommodation near Cheluvanarayana Swamy Temple.
         </p>
         <div class="mt-3">
-          <p class="small mb-0">Visiter Count: <span id="visitor-count"
+          <p class="small mb-0">Visitor Count: <span id="visitor-count"
               class="text-white fw-bold"><?php echo $visitorCount; ?></span></p>
         </div>
       </div>
