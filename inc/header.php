@@ -111,7 +111,7 @@ if ($conn) {
       </ul>
 
       <div class="d-flex align-items-center">
-        <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹999/- Per Day</strong></span>
+        <span class="me-3 text-primary small d-none d-lg-inline"><strong>Rooms from ₹4999/- Per Day</strong></span>
         <a href="bookings.php" class="btn btn-primary me-2 <?= isActivePage('bookings.php'); ?>"><i class="fa fa-calendar"></i> Book Now</a>
         <a href="https://wa.me/919008288474" class="btn btn-success d-none d-md-inline"><i class="fa fa-whatsapp"></i> WhatsApp</a>
       </div>
