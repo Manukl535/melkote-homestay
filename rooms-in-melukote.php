@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Rooms in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa 2BHK</title>
+  <title>Homestay in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa 2BHK</title>
 
   <meta name="description"
     content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹4999. Book your pilgrim stay today!" />
@@ -25,9 +25,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Shree Niwasa Melukote" />
   <meta property="og:url" content="https://melukote.com/" />
-  <meta property="og:title" content="Rooms in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa" />
+  <meta property="og:title" content="Homestay in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa" />
   <meta property="og:description"
-    content="Clean and comfortable 2BHK family rooms near Cheluvanarayana Swamy Temple, Melukote." />
+    content="Clean and comfortable 2BHK family homestay near Cheluvanarayana Swamy Temple, Melukote." />
   <meta property="og:image" content="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
   <meta property="og:image:alt" content="Clean and spacious rooms at Shree Niwasa Homestay Melukote" />
 
