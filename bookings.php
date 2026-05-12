@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $d1 = new DateTime($check_in);
         $d2 = new DateTime($check_out);
         $days = max(1, $d1->diff($d2)->days);
-        $price_per_day = 999;
+        $price_per_day = 4999;
         $total_cost = $days * $price_per_day;
 
         // Dynamic UPI QR
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Book Your 2BHK Pilgrim-Friendly Homestay | Shree Niwasa, Melukote | Rooms from ₹999</title>
+  <title>Book Your 2BHK Pilgrim-Friendly Homestay | Shree Niwasa, Melukote | Rooms from ₹1499</title>
   <meta name="description"
     content="Secure your stay at Shree Niwasa Homestay in Melukote. Clean and spacious 2BHK rooms near Cheluvanarayana Swamy Temple. Affordable, pilgrim-friendly accommodation. Check availability online today!" />
 
@@ -167,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       "@id": "https://melukote.com",
       "url": "https://melukote.com/bookings.php",
       "telephone": "+919008288474",
-      "priceRange": "₹999 - ₹1500",
+      "priceRange": "₹499 - ₹4999",
       "starRating": {
         "@type": "Rating",
         "ratingValue": "4.8",
@@ -478,7 +478,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <h2 class="text-center mb-2" style="font-family: 'Playfair Display', serif;">Reserve Your Stay</h2>
             <p class="text-center text-muted mb-4">
-              <span class="badge bg-primary fs-6">Contribution: ₹999/day</span>
+              <span class="badge bg-primary fs-6">Contribution: ₹4999/day</span>
             </p>
             <p class="text-center text-muted mb-4">Need Instructions for booking?
               <a href="shree-niwasa-homestay-in-melukote-booking-instructions.php">Click here</a>
@@ -653,7 +653,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     const aadharInput = document.getElementById('aadhar_num');
 
     const bookedDates = <?= $booked_dates_json ?>;
-    const PRICE_PER_DAY = 999;
+    const PRICE_PER_DAY = 4999;
 
     // -----------------------------
     // DATE PICKER

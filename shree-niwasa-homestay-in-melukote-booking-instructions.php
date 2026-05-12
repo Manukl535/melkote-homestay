@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- BASIC META -->
   <meta charset="UTF-8" />
@@ -8,7 +9,7 @@
   <!-- SEO META -->
   <title>How to Book Shree Niwasa Homestay in Melukote | Online Booking Guide</title>
   <meta name="description"
-    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹999. Book your pilgrim stay today!" />
+    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹4999. Book your pilgrim stay today!" />
 
   <!-- Performance -->
   <link rel="preload" as="image" href="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
@@ -49,7 +50,7 @@
       "url": "https://melukote.com/",
       "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
       "telephone": "+919008288474",
-      "priceRange": "₹999–₹1500",
+      "priceRange": "₹499–₹4999",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, UPI",
       "checkinTime": "12:00:00",
@@ -100,145 +101,145 @@
   ]
   </script>
 
-<style>
-  :root {
-    --primary: #1f7a55;
-    --secondary: #f2f7f4;
-    --accent: #0d6efd;
-    --text-dark: #1a1a1a;
-    --text-muted: #6c757d;
-    --border-soft: #e5e9ec;
-    --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  }
+  <style>
+    :root {
+      --primary: #1f7a55;
+      --secondary: #f2f7f4;
+      --accent: #0d6efd;
+      --text-dark: #1a1a1a;
+      --text-muted: #6c757d;
+      --border-soft: #e5e9ec;
+      --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    }
 
-  body {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(180deg, #f5f8f6 0%, #eef3f0 100%);
-    margin: 0;
-    color: var(--text-dark);
-    line-height: 1.75;
-  }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #f5f8f6 0%, #eef3f0 100%);
+      margin: 0;
+      color: var(--text-dark);
+      line-height: 1.75;
+    }
 
-  .container {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 45px 40px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: var(--card-shadow);
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 45px;
-  }
-
-  header h1 {
-    font-size: 2.4rem;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  header p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin: auto;
-  }
-
-  section {
-    margin-bottom: 35px;
-    padding: 25px 28px;
-    border: 1px solid var(--border-soft);
-    border-radius: 14px;
-    background: #ffffff;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
-  }
-
-  h2 {
-    font-size: 1.35rem;
-    margin-bottom: 12px;
-    color: var(--primary);
-  }
-
-  p {
-    margin: 0 0 10px;
-    color: #2f2f2f;
-  }
-
-  ul {
-    margin: 10px 0 0 20px;
-  }
-
-  ul li {
-    margin-bottom: 6px;
-  }
-
-  .highlight {
-    background: linear-gradient(135deg, #eef8f2, #f6fbf8);
-    border-left: 6px solid var(--primary);
-  }
-
-  .cta {
-    background: linear-gradient(135deg, var(--accent), #0b5ed7);
-    color: #fff;
-    padding: 26px;
-    text-align: center;
-    border-radius: 16px;
-    margin-top: 50px;
-    box-shadow: 0 15px 30px rgba(13, 110, 253, 0.3);
-  }
-
-  .cta p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-
-  .cta a {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 12px 26px;
-    background: #ffffff;
-    color: var(--accent);
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.25s ease;
-  }
-
-  .cta a:hover {
-    background: #f1f5ff;
-    transform: translateY(-2px);
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 55px;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
     .container {
-      margin: 30px 15px;
-      padding: 30px 22px;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 45px 40px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: var(--card-shadow);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 45px;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: auto;
     }
 
     section {
-      padding: 20px;
+      margin-bottom: 35px;
+      padding: 25px 28px;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      background: #ffffff;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-  }
-</style>
+
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: #2f2f2f;
+    }
+
+    ul {
+      margin: 10px 0 0 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #eef8f2, #f6fbf8);
+      border-left: 6px solid var(--primary);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--accent), #0b5ed7);
+      color: #fff;
+      padding: 26px;
+      text-align: center;
+      border-radius: 16px;
+      margin-top: 50px;
+      box-shadow: 0 15px 30px rgba(13, 110, 253, 0.3);
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 26px;
+      background: #ffffff;
+      color: var(--accent);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .cta a:hover {
+      background: #f1f5ff;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 55px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        margin: 30px 15px;
+        padding: 30px 22px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -253,13 +254,13 @@
     </header>
     <section>
       <h2>Download Manual</h2>
-        <p>
-            For your convenience, you can download a PDF version of these booking instructions:
-            <a href="Shree-Niwasa-Homestay-Booking-Instructions.pdf" target="_blank" rel="noopener noreferrer">
-            Download Booking Instructions
-            </a>
-        </p>
-    </section> 
+      <p>
+        For your convenience, you can download a PDF version of these booking instructions:
+        <a href="Shree-Niwasa-Homestay-Booking-Instructions.pdf" target="_blank" rel="noopener noreferrer">
+          Download Booking Instructions
+        </a>
+      </p>
+    </section>
     <section>
       <h2>Step 1: Read Disclaimer & Availability Information</h2>
       <p>
@@ -269,7 +270,7 @@
       </p>
     </section>
 
-   
+
     <section>
       <h2>Step 2: Select Your Stay Dates</h2>
       <p>
@@ -278,9 +279,9 @@
       </p>
       <ul>
         <li>Total number of days</li>
-        <li>Contribution amount (₹999 per day)</li>
+        <li>Contribution amount (₹1499 per day)</li>
       </ul>
-    
+
     </section>
 
     <section>
@@ -319,7 +320,7 @@
         to complete your reservation confirmation.
       </p>
     </section>
-    
+
     <div class="cta">
       <p>
         Ready to book your stay?
@@ -334,4 +335,5 @@
   </main>
 
 </body>
+
 </html>

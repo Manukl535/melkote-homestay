@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Policies | Shree Niwasa - Melukote Homestay</title>
   <meta name="description"
-    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹999. Book your pilgrim stay today!" />
+    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹4999. Book your pilgrim stay today!" />
 
   <!-- Performance -->
   <link rel="preload" as="image" href="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
@@ -47,7 +47,7 @@
       "url": "https://melukote.com/",
       "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
       "telephone": "+919008288474",
-      "priceRange": "₹999–₹1500",
+      "priceRange": "₹499–₹4999",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, UPI",
       "checkinTime": "12:00:00",

@@ -9,7 +9,7 @@
   <title>Homestay in Melukote Near Cheluvanarayana Swamy Temple | Shree Niwasa 2BHK</title>
 
   <meta name="description"
-    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹999. Book your pilgrim stay today!" />
+    content="Affordable 2BHK homestay in Melukote near Cheluvanarayana Swamy Temple. Peaceful, clean family rooms starting at ₹4999. Book your pilgrim stay today!" />
 
   <!-- Performance -->
   <link rel="preload" as="image" href="https://melukote.com/img/homestay-melukote-shree-niwasa.png" />
@@ -50,7 +50,7 @@
       "url": "https://melukote.com/",
       "image": "https://melukote.com/img/homestay-melukote-shree-niwasa.png",
       "telephone": "+919008288474",
-      "priceRange": "₹999–₹1500",
+      "priceRange": "₹499–₹4900",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, UPI",
       "checkinTime": "12:00:00",
@@ -166,10 +166,10 @@
 
   <!-- Hero Banner & About Homestay Start -->
   <main class="mt-5">
-    
+
 
     <div class="container">
-      <div class="row mb-5 about-quick-facts">
+      <div class="row  mb-5 about-quick-facts">
 
         <!-- About Section -->
         <div id="about" class="col-lg-6">
@@ -181,7 +181,7 @@
             <strong>Sri Vairamudi Utsava</strong>.
           </p>
           <p>
-            Unlike expensive hotels, our <strong>homestay contribution is just ₹999/day</strong>,
+            Unlike expensive hotels, our <strong>homestay contribution is just ₹4999/day</strong>,
             providing a clean home-like stay for devotees.
           </p>
 
@@ -209,6 +209,7 @@
               <strong>Booking:</strong>
               <a href="tel:+919008288474">+91 90082 88474</a>
             </li>
+            Note: For each extra person Rs 500 will be charged
           </ul>
 
           <!-- Compact Availability Calendar -->
@@ -412,7 +413,7 @@
         <div class="facility-card p-4 shadow-sm border rounded">
           <i class="fa fa-cutlery fa-2x text-primary mb-3"></i>
           <h5>Kitchen Access</h5>
-          <p class="small text-muted">Equipped kitchen for pilgrims to prepare milk or light meals.</p>
+          <p class="small text-muted">Equipped kitchen for pilgrims to prepare hot water, milk or light meals.</p>
         </div>
       </div>
       <div class="col-md-4">
